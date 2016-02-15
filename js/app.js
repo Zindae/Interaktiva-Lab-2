@@ -1,9 +1,13 @@
+// CONTROLLER
+
 $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
 	
+	var sideView = new sideView($(".main1sideview"));
+	
 	//And create the needed controllers and views
-	var exampleView = new ExampleView($("#exampleView"));
+	var main1View = new main1View($(".main1 container"));
 
 	
 
@@ -37,6 +41,7 @@ $(function() {
  //        });
  //    });
 
+ 
 
 
 });
