@@ -10,46 +10,53 @@ var DinnerModel = function() {
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
+		// Väljer hur många människor som kommer (knapp Up-down / sideview)
 		numberOfGuests = int num;
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
+		// Visa hur många som kommer i sideview OCH på overviewen / summary.
 		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
 	this.getSelectedDish = function(type) {
+		//  Hämta data beroende på "This is a dropdown" knappen, var namn 'type'
 		//TODO Lab 2
 	}
 
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2
-		for i in dishes
-			return 'name'
+		// Hämta alla rätter efter att man har valt i en for loop. 
+			return menu
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
+		// Hämta ingredienser med hjälp av GetFullMenu
 		//TODO Lab 2
 	}
 
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
 	this.getTotalMenuPrice = function() {
 		//TODO Lab 2
+		// Samma som förra funktionen, fast med Price.
 	}
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
+	
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
-		lägger til rätt till menu med hjälp av ID exempelvis [1, 23, 41]
+		// lägger til rätt till menu med hjälp av ID exempelvis [1, 23, 41]
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
+		// tar bort rätt från listan
 		//TODO Lab 2
 	}
 
