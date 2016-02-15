@@ -1,17 +1,22 @@
 //DinnerModel Object constructor DATA
 var DinnerModel = function() {
  
+	var numberOfGuests;
+	var menu = [1,23, 42];
+	var
 	//TODO Lab 2 implement the data structure that will hold number of guest
 	// and selected dinner options for dinner menu
 
 
 	this.setNumberOfGuests = function(num) {
 		//TODO Lab 2
+		numberOfGuests = int num;
 	}
 
 	// should return 
 	this.getNumberOfGuests = function() {
 		//TODO Lab 2
+		return numberOfGuests;
 	}
 
 	//Returns the dish that is on the menu for selected type 
@@ -22,6 +27,8 @@ var DinnerModel = function() {
 	//Returns all the dishes on the menu.
 	this.getFullMenu = function() {
 		//TODO Lab 2
+		for i in dishes
+			return 'name'
 	}
 
 	//Returns all ingredients for all the dishes on the menu.
@@ -38,6 +45,7 @@ var DinnerModel = function() {
 	//it is removed from the menu and the new one added.
 	this.addDishToMenu = function(id) {
 		//TODO Lab 2 
+		lägger til rätt till menu med hjälp av ID exempelvis [1, 23, 41]
 	}
 
 	//Removes dish from menu
