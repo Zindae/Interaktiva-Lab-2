@@ -1,0 +1,112 @@
+html {
+	/*background-image: url(../images/home-background.jpg);*/
+
+	font-style: Helvetica;
+}
+
+#page-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 100px;
+	background-color: beige;
+	/*margin:0px auto;*/
+	/*background: transparent;*/
+	/*opacity: .5;*/
+}
+
+#page-logo {
+	text-align:left;float:left;
+}
+
+#page-tagline {
+	display: inline;
+}
+
+.demo-view-buttons {
+	float: right;
+}
+
+.example-container {
+	display: none;
+}
+
+.home-page-start {
+	/*display: block;
+	position: fixed;*/
+	display: all;
+	width: 600px;
+    height: 300px;
+    background-color: beige;
+    /*position: absolute;*/
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: 241px 0 241px 5px;
+    /*opacity: .5;*/
+}
+
+
+.home-page-start h2::after {
+	display: block;
+	content: ""; 
+	/*..here, auto makes the element float in the middle but stay locked vertically*/
+	margin: .7em auto 0;
+	width: 98%;
+	border-bottom: solid 1px black;
+	/*opacity: .5;*/
+}
+.dishes-overview::after {
+	display: block;
+	content: ""; 
+	/*..here, auto makes the element float in the middle but stay locked vertically*/
+	margin: .7em auto 0;
+	width: 98%;
+	border-bottom: solid 1px black;
+	/*opacity: .5;*/
+}
+
+.view1-and-view2 {
+	margin: auto;
+}
+
+.side-view {
+	background-color: orange;
+	padding-bottom: 100%;
+	margin: 0;
+	border: dashed red;
+}
+.side-view-people-selection {
+	display: block;
+	border: dashed green;
+}
+
+.side-view-dish-name-and-cost {
+	display: block;
+	border: dashed purple;
+}
+.side-view-dish-name {
+	position: left;
+}
+.side-view-dish-cost {
+
+}
+.side-view-pending-foods {
+	background-color: yellow;
+	border: dashed green;
+}
+.side-view-total-cost-and-confirm {
+	border: dashed magenta;
+	margin-top: 50px;
+}
+
+.pending-foods-in-sideview::after {
+		display: block;
+	content: ""; 
+	/*..here, auto makes the element float in the middle but stay locked vertically*/
+	margin: .7em auto 0;
+	width: 98%;
+	border-bottom: solid 1px black;
+	/*opacity: .5;*/
+}
