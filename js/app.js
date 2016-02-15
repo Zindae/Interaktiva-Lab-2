@@ -1,5 +1,26 @@
 // CONTROLLER
 
+// JS för mjuk scroll
+$('a[href^="#"]').on('click', function(event) {
+
+    var target = $( $(this).attr('href') );
+
+    if( target.length ) {
+        event.preventDefault();
+        $('html, body').animate({
+            scrollTop: target.offset().top
+        }, 1000);
+    }
+
+});
+
+//TEST funktion för JS
+
+function sayHello() {
+   alert("Hello World")
+}
+
+
 $(function() {
 	//We instantiate our model
 	var model = new DinnerModel();
@@ -9,7 +30,8 @@ $(function() {
 	//And create the needed controllers and views
 	var main1View = new main1View($(".main1 container"));
 
-	
+	var row1 = new row1($('td:row main1view1').hide();) //testkod för HIDE, "row main1view1".
+		
 	var main1view1 //Skickar info till main1view2
 	var main1view2 //Klicka på confirm dish -> addDishToMenu i model
 	var main2view1 //for dishes in getFullMenu för att lista upp alla valda rätter	// GetFullMenu kan man använda här.

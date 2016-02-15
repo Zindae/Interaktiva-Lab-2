@@ -1,5 +1,6 @@
 <!-- VIEW -->
-
+<head>
+</head>
 <!DOCTYPE html>
 <html lang="en">
   	<head>
@@ -7,7 +8,7 @@
 	    <meta http-equiv="X-UA-Compatible" content="IE=edge">
 	    <meta name="viewport" content="width=device-width, initial-scale=1">
 	    <title>Dinner planner</title>
-
+				
 	    <!-- Bootstrap CSS -->
     	<link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/css/bootstrap.min.css">
     	<link rel="stylesheet" type="text/css" href="css/styles.css">
@@ -28,7 +29,7 @@
   		</header>
 		
 
-		<div class="home-page-start">
+		<center><div class="home-page-start">
 			<h2>A home dinner service</h2>
 			<p class="home-page-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 			tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
@@ -36,20 +37,27 @@
 			consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
 			cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 			proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-			<p class="start-quickly">Start Quickly</p>
-			<button>Create new dinner</button>
-		</div> <!-- homepage -->
-
-		<div class="main1 container">
-			<h3>This is in the view1-and-view2 container</h3>
 			
+			
+			<!-- Knapp för att scrolla ner till nästa view-->
+			<a href="#bottom" id="top"><button>Click to start!</button></a> 
+
+		</div> </center><!-- homepage -->
+		<div class="main1 container">
+		
+			
+			
+			<h3>This is in the view1-and-view2 container</h3>
+
+
+
 			<div class="row">
 				<div class="main1sideview col-xs-2">
 					
 					<h4>My Dinner</h4>
 						<div class="side-view-people-selection">
 							<p>People</p>
-							<button>Up-Down</button>
+							<input type="number" step="1" value="1">
 						</div>
 						<div class="side-view-dish-name-and-cost">
 							<span class="side-view-dish-name">Dish Name</span><span class="side-view-dish-cost">Cost</span>
@@ -76,10 +84,18 @@
 					<p>This is inside the 10-spanning right big column.</p>					
 					<div class="row main1search">
 						<div class="col-xs-3" style="background-color: beige">
-						<br>
+						<br>      
+
 							<p>This is inside the search and dropdown column.</p>						
 							<!--<button>This is a search bar.</button>
 							<button>This is a dropdown.</button>-->
+							
+							
+							<!-- Knapp för att scrolla upp till början-->
+							<a href="#top" id="bottom">Click to restart</a>
+							<!-- JS kod för mjuk scroll: 
+							http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/ -->
+							
 							<select class="form-control">
 							  <option>Standard</option>
 							  <option>Vego</option>
@@ -120,6 +136,8 @@
 			</div>
 		</div> <!-- main1container -->
 		
+		<hr>
+		<hr>
 		<div class="main2 container">
 			<div class="row main2statusbanner">
 				<p>this is the top display bar in view 3 and4</p>
@@ -198,13 +216,14 @@
 
 
 
-		<!-- jQuery -->
-		<script src="https://code.jquery.com/jquery.js"></script>
+
 		<!-- Bootstrap JavaScript, needed if you want for instance tabs, models, popovers etc. -->
 		<script src="http://netdna.bootstrapcdn.com/bootstrap/3.1.0/js/bootstrap.min.js"></script>
+		<!-- JQuery -->
+		<script src="https://code.jquery.com/jquery.js"></script>
 		<!-- The application JavaScript code -->
-		<script src="js/app.js"></script>
-		<script src="js/model/dinnerModel.js"></script>
+		<script src="/js/app.js"></script>
+		<script src="/js/model/dinnerModel.js"></script>
 		<!--<script src="js/view/exampleView.js"></script> -->
 		<!-- <script src="js/view/exampleViewController.js"></script> -->
 	</body>
