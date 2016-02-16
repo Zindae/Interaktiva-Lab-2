@@ -89,7 +89,13 @@ var DinnerModel = function() {
 			}
 		}
 	}
-
+	
+	// Gets All Recipes
+	this.getAll = function () {
+		for(i in dishes)
+			return dishes;
+	}
+		
 	// this.getAll = function() {
 		// for(i in dishes){
 			// console.log(dishes);
