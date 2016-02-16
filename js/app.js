@@ -54,14 +54,49 @@ $(document).ready(function(){
 	
 	// Get DinnerModel function
 	var model = new DinnerModel();
-
+	var confirmedDish = [];
+	
 	// Hide / Show pages
-	$('#button2').click(function(){
+	$('#button2, #back').click(function(){
 		
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
 		$('.start-page, .main1view2, .main2').hide();
 		
+	});
+	
+	$('#Confirm').click(function(){
+		
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view2, .main2').hide();
+		
+		//Confirm pushar till listan för att lagra för sideview
+		confirmedDish.push(name.name);
+		console.log(confirmedDish);
+
+	});
+	
+	// Function to detect clickable
+	
+	// <table>
+    // <tr>
+        // <td>1</td>
+        // <td>2</td>
+        // <td>3</td>
+    // </tr>
+    // <tr>
+        // <td>1</td>
+        // <td>2</td>
+        // <td>3</td>
+    // </tr>
+	// </table>
+	
+	// -------- JQ ---------
+	$('.main1view1').delegate('','click',function() {
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view1, .main2').hide();
 	});
 	
 	
@@ -82,7 +117,12 @@ $(document).ready(function(){
 		
 		//Creates DIV with recipe info.
 		$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
-	}
+		}
+	$(".main1view2").append('<div class="col-xs-6"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
+		// $(".dish-name").append('<span>'+name.name+'</span');
+		// $(".dish-cost").append('<span>'+name.price+'</span');
+		
+		
 
 });
 	
