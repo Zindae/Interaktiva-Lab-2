@@ -1,3 +1,87 @@
+$(document).ready(function(){        
+	
+	// Get DinnerModel function
+	var model = new DinnerModel();
+	
+
+	// Hide / Show pages
+	$('#button2, #back, #main2-go-back').click(function(){
+		
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view2, .main2').hide();
+		
+	});
+	
+
+	
+	// Confirm Dish button
+	// Should add info to list to show in sideview. Need DIV data from click
+	$('#confirmDish').click(function(){
+		
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view2, .main2').hide();
+		
+		//Confirm pushes to list for sideview info
+		// NOT FINISHED / usable
+		confirmedDish.push(name.name);
+		console.log(confirmedDish);
+
+	});
+
+	// Sideview List
+	var confirmedDish = [];
+	
+	// Sideview Confirm button
+	$('#confirmDinner').click(function(){
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main2').show(); 
+		$('.start-page, .main2view1, .main1').hide();
+	});
+	
+	
+	/////////////// MAINVIEW START //////////////
+	// Function to detect click on single food course main1view1. On click, show main1view2.
+	// Problem: Need either 1 view for each course or generate new views each time with clicked data.
+	
+	// $('.main1view1').delegate('div','click',function() {
+		// $('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		// $('.main1').show(); 
+		// $('.start-page, .main1view1, .main2').hide();
+
+		//console.log($('main1view1').get( 0 ));
+		//$(".main1view2").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
+		
+		
+		
+		
+	// MAIN1VIEW1 page generation, get data from Dinnermodel.js.
+	
+	// All recipes 
+	var allRecipes = model.getAll();
+	
+	// Length of the array for the FOR loop
+	var len = allRecipes.length;
+	
+	//Iterates through every recipe in dinnerModel.js
+	for(i = 0; i < len; i++){
+		
+		// Gets specific recipe
+		var name = allRecipes[i];
+	
+		//Creates DIV with recipe info.
+		$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><a href="#" data-toggle="popover" data-trigger="focus" title="'+name.name+'" data-content="'+name.description+'"><p><b>'+name.name+'</b></p></a></div>');
+
+		//$(".main1view1").append('<a href="#" data-toggle="popover" title="'+name.name+'" data-content="'+name.description+'">123</a>');
+		//$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p></div>');
+
+	};
+	/////////////// MAINVIEW END //////////////
+});
+
+	
+
 // // CONTROLLER
 
 // $(function() {
@@ -19,134 +103,29 @@
 // 			output (i.price, i.något)
 // 	var main2view2 //2-2 visar bilden, ingredienserna, lorem ipsum texten.
 	
-	
-
-// // $(document).ready(function(){        
-// // 		// ADD SOME .css("display", "");
-// //         $('#button1, #button2, #button3, #button4, #button5').click(function() {        
-// //              switch(this.id) {
-// //              	case 'button1'	:
-// //              		// $('.start-page').show('fast');
-// //              		$('.main1, main2').hide('fast');
-// //              		break;
-// //              	// case 'button2':
+// $(document).ready(function(){        
+// 		// ADD SOME .css("display", "");
+//         $('#button1, #button2, #button3, #button4, #button5').click(function() {        
+//              switch(this.id) {
+//              	case 'button1'	:
+//              		// $('.start-page').show('fast');
+//              		$('.main1, main2').hide('fast');
+//              		break;
+//              	// case 'button2':
              		
-// //              	// 	break;
-// //              	// case 'button3':
+//              	// 	break;
+//              	// case 'button3':
              		
-// //              	// 	break;
-// //              	// case 'button4':
+//              	// 	break;
+//              	// case 'button4':
              		
-// //              	// 	break;
-// //              	// case 'button5':
+//              	// 	break;
+//              	// case 'button5':
              		
-// //              	// 	break;
-// // 			}
-// //         });
-// //     });
-
- 
-
-
-// });
-
-$(document).ready(function(){        
-	
-	// Get DinnerModel function
-	var model = new DinnerModel();
-	var confirmedDish = [];
-	
-	// Hide / Show pages
-	$('#button2, #back, #main2-go-back').click(function(){
-		
-		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-		$('.main1').show(); 
-		$('.start-page, .main1view2, .main2').hide();
-		
-	});
-	
-	$('#confirmDish').click(function(){
-		
-		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-		$('.main1').show(); 
-		$('.start-page, .main1view2, .main2').hide();
-		
-		//Confirm pushar till listan för att lagra för sideview
-		confirmedDish.push(name.name);
-		console.log(confirmedDish);
-
-
-	});
-	
-	
-	$('#confirmDinner').click(function(){
-		// $('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-		// $('.main2').show(); 
-		// $('.start-page, .main2view2, .main1').hide();
-		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-		$('.main2').show(); 
-		$('.start-page, .main2view1, .main1').hide();
-	});
-	
-	$(document).on("click",".appDetails", function (event) {
-		alert(event.target.id);
-	});
-	
-	// Function to detect clickable
-	
-	// <table>
-    // <tr>
-        // <td>1</td>
-        // <td>2</td>
-        // <td>3</td>
-    // </tr>
-    // <tr>
-        // <td>1</td>
-        // <td>2</td>
-        // <td>3</td>
-    // </tr>
-	// </table>
-	
-	// -------- JQ ---------
-	$('.main1view1').delegate('','click',function() {
-		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-		$('.main1').show(); 
-		$('.start-page, .main1view1, .main2').hide();
-		
-		
-		});
-	
-	
-	// All recipes 
-	var allRecipes = model.getAll();
-	console.log(allRecipes);
-	
-	// Length of the array for the FOR loop
-	var len = allRecipes.length;
-	console.log(len);
-	
-	//Iterates through every recipe in dinnerModel.js
-	for(i = 0; i < len; i++){
-		
-		// Gets specific recipe
-		var name = allRecipes[i];
-		console.log(name);
-		
-		//Creates DIV with recipe info.
-		$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
-		}
-	
-	// j = 1;
-	// var view2 = allRecipes[i];
-	$(".main1view2").append('<div class="col-xs-6"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
-		// $(".dish-name").append('<span>'+name.name+'</span');
-		// $(".dish-cost").append('<span>'+name.price+'</span');
-		
-
-});
-	
-
-	
+//              	// 	break;
+// 			}
+//         });
+//     });
 
 
 // $(document).ready(function(){        

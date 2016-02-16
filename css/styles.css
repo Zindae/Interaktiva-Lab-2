@@ -216,3 +216,14 @@ Buttons
 	display: inline-block;
     vertical-align: middle;
 }
+
+/***************************************************
+Popover
+***************************************************/
+
+.popover-content {
+    background-color: gray;
+    color: #FFFFFF;
+    padding: 25px;
+	max-width:600px;
+}
