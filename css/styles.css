@@ -1,20 +1,38 @@
+/**
+ * Table of Contents
+ *
+ *
+ *
+ *
+ * Reset
+ * 
+ *Text & Fonts
+ * Header
+ * Bootstrap Override
+ * Sideview
+ * Search & Status-bar
+ * Buttons 
+ *
+ */
+
+/***************************************************
+Reset
+***************************************************/
+
 html {
 	/*background-image: url(../images/home-background.jpg);*/
-
-	font-style: Helvetica;
+	font-style: Helvetica;	
+}
+/***************************************************
+Text & Fonts
+***************************************************/
+h1, h2, h3, h4, h5, h6 {
+	margin-left: 5px;
 }
 
-#page-header {
-	width: 100%;
-	position: fixed;
-	top: 0;
-	height: 100px;
-	background-color: beige;
-	/*margin:0px auto;*/
-	/*background: transparent;*/
-	/*opacity: .5;*/
-}
-
+/***************************************************
+--------
+***************************************************/
 #page-logo {
 	text-align:left;float:left;
 }
@@ -31,7 +49,7 @@ html {
 	display: none;
 }
 
-.home-page-start {
+.start-page {
 	/*display: block;
 	position: fixed;*/
 	display: all;
@@ -48,7 +66,7 @@ html {
 }
 
 
-.home-page-start h2::after {
+.start-page h2::after {
 	display: block;
 	content: ""; 
 	/*..here, auto makes the element float in the middle but stay locked vertically*/
@@ -57,7 +75,7 @@ html {
 	border-bottom: solid 1px black;
 	/*opacity: .5;*/
 }
-.dishes-overview::after {
+.main2dishes::after {
 	display: block;
 	content: ""; 
 	/*..here, auto makes the element float in the middle but stay locked vertically*/
@@ -67,10 +85,70 @@ html {
 	/*opacity: .5;*/
 }
 
-.view1-and-view2 {
-	margin: auto;
+/***************************************************
+Header
+***************************************************/
+#page-header {
+	width: 100%;
+	position: fixed;
+	top: 0;
+	height: 100px;
+	background-color: beige;
+	z-index: 1;
+	/*margin:0px auto;*/
+	/*background: transparent;*/
+	/*opacity: .5;*/
 }
 
+
+
+/***************************************************
+Bootstrap Override
+***************************************************/
+.main1, .main2 {
+	display: none;
+	margin-bottom: 0px;
+}
+.main1view1, .main1view2, .main2view1, .main2view2 {
+	/*overflow: scroll;*/
+}
+
+.main1 {
+	background-color: #afa;
+}
+.main2 {
+	background-color: #edd;
+}
+.main1content {
+	background-color: #4dd;
+}
+.main1view1 {
+	background-color: #C895E8
+
+}
+.main1view2 {
+	background-color: #C2E8E2
+}
+
+.main2view2 p {
+	background-color: pink;
+}
+
+.main1search {
+	background-color: #deb;
+}
+.container {
+	width: 100%;
+	margin: 100px 0px 0px 0px;
+}
+.main2printrecipe {
+	/*height: 100%;*/
+	/*margin-bottom: 0px;*/
+}
+
+/***************************************************
+Sideview
+***************************************************/
 .side-view {
 	background-color: orange;
 	padding-bottom: 100%;
@@ -109,4 +187,32 @@ html {
 	width: 98%;
 	border-bottom: solid 1px black;
 	/*opacity: .5;*/
+}
+
+/***************************************************
+Search & Status-bar
+***************************************************/
+.main2statusbanner {
+	background-color: #6AADB5;
+}
+
+/***************************************************
+Buttons
+***************************************************/
+.print-recipe {
+	/*position: relative;
+
+	text-align: center;
+	*/
+	display: block;
+    margin: 0 auto;
+    /*text-align: center;*/
+    margin-bottom: 100%;
+}
+.main2-go-back {
+	/*position: inline;*/
+	float: right;
+	/*vertical-align: center;*/
+	display: inline-block;
+    vertical-align: middle;
 }
