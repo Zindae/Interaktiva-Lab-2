@@ -57,7 +57,7 @@ $(document).ready(function(){
 	var confirmedDish = [];
 	
 	// Hide / Show pages
-	$('#button2, #back').click(function(){
+	$('#button2, #back, #main2-go-back').click(function(){
 		
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
@@ -65,7 +65,7 @@ $(document).ready(function(){
 		
 	});
 	
-	$('#Confirm').click(function(){
+	$('#confirmDish').click(function(){
 		
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
@@ -75,6 +75,21 @@ $(document).ready(function(){
 		confirmedDish.push(name.name);
 		console.log(confirmedDish);
 
+
+	});
+	
+	
+	$('#confirmDinner').click(function(){
+		// $('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		// $('.main2').show(); 
+		// $('.start-page, .main2view2, .main1').hide();
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main2').show(); 
+		$('.start-page, .main2view1, .main1').hide();
+	});
+	
+	$(document).on("click",".appDetails", function (event) {
+		alert(event.target.id);
 	});
 	
 	// Function to detect clickable
@@ -97,7 +112,9 @@ $(document).ready(function(){
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
 		$('.start-page, .main1view1, .main2').hide();
-	});
+		
+		
+		});
 	
 	
 	// All recipes 
@@ -118,10 +135,12 @@ $(document).ready(function(){
 		//Creates DIV with recipe info.
 		$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
 		}
+	
+	// j = 1;
+	// var view2 = allRecipes[i];
 	$(".main1view2").append('<div class="col-xs-6"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
 		// $(".dish-name").append('<span>'+name.name+'</span');
 		// $(".dish-cost").append('<span>'+name.price+'</span');
-		
 		
 
 });
