@@ -135,7 +135,7 @@ Bootstrap Override
 }
 
 .main1search {
-	background-color: #deb;
+	background-color: lightred;
 }
 .container {
 	width: 100%;
@@ -153,16 +153,16 @@ Sideview
 	background-color: orange;
 	padding-bottom: 100%;
 	margin: 0;
-	border: dashed red;
+	border: solid red;
 }
 .side-view-people-selection {
 	display: block;
-	border: dashed green;
+	border: solid green;
 }
 
 .side-view-dish-name-and-cost {
 	display: block;
-	border: dashed purple;
+	border: solid purple;
 }
 .side-view-dish-name {
 	position: left;
@@ -172,10 +172,10 @@ Sideview
 }
 .side-view-pending-foods {
 	background-color: yellow;
-	border: dashed green;
+	border: solid green;
 }
 .side-view-total-cost-and-confirm {
-	border: dashed magenta;
+	border: solid magenta;
 	margin-top: 50px;
 }
 

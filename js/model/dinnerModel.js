@@ -2,63 +2,57 @@
 var DinnerModel = function() {
  
 	var numberOfGuests;
-	var menu = [];
-	//TODO Lab 2 implement the data structure that will hold number of guest
-	// and selected dinner options for dinner menu
-
+	var confirmedDish = [];
 
 	this.setNumberOfGuests = function(num) {
-		//TODO Lab 2
 		// Väljer hur många människor som kommer (knapp Up-down / sideview)
 		numberOfGuests = num;
 	}
 
-	// should return 
 	this.getNumberOfGuests = function() {
-		//TODO Lab 2
 		// Visa hur många som kommer i sideview OCH på overviewen / summary.
 		return numberOfGuests;
 	}
 
-	//Returns the dish that is on the menu for selected type 
-	this.getSelectedDish = function(type) {
-		//  Hämta data beroende på "This is a dropdown" knappen, var namn 'type'
-		//TODO Lab 2
-	}
-
-	//Returns all the dishes on the menu.
-	this.getFullMenu = function() {
-		//TODO Lab 2
-		// Hämta alla rätter efter att man har valt i en for loop. 
-			return menu
-	}
-
-	//Returns all ingredients for all the dishes on the menu.
-	this.getAllIngredients = function() {
-		// Hämta ingredienser med hjälp av GetFullMenu
-		//TODO Lab 2
-	}
-
 	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
-	this.getTotalMenuPrice = function() {
-		//TODO Lab 2
-		// Samma som förra funktionen, fast med Price.
-	}
+	// this.getTotalMenuPrice = function(numberOfGuests, confirmedDish) {
+		// var len = confirmedDish.length;
+		
+		// for(i = 0; i < len; i++){
+			// var id = confirmedDish[i];
+			// var getDish(ID).ingredients(i);
+			
+			// for(j = 0, j < len; j++){
+			
+			// }
+			// var ingredients = getDish(i).ingredients[i];
+			
+		// }
+	// }
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	
 	this.addDishToMenu = function(id) {
-		//TODO Lab 2 
-		// lägger til rätt till menu med hjälp av ID exempelvis [1, 23, 41]
+		confirmedDish.push(id);
+		return confirmedDish;
 	}
 
 	//Removes dish from menu
 	this.removeDishFromMenu = function(id) {
-		// tar bort rätt från listan
-		//TODO Lab 2
+		confirmedDish.pop();
+		return confirmedDish;
 	}
 
+	
+	//Returns all ingredients for all the dishes on the menu.
+	this.getAllIngredients = function() {
+		for(i in dishes.ingredients){
+			return dishes.ingredients;
+		}
+	}
+
+	
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
@@ -95,13 +89,6 @@ var DinnerModel = function() {
 		for(i in dishes)
 			return dishes;
 	}
-		
-	// this.getAll = function() {
-		// for(i in dishes){
-			// console.log(dishes);
-		
-		// }
-	// }
 	
 	
 	// the dishes variable contains an array of all the 
@@ -112,6 +99,7 @@ var DinnerModel = function() {
 	// defining the unit i.e. "g", "slices", "ml". Unit
 	// can sometimes be empty like in the example of eggs where
 	// you just say "5 eggs" and not "5 pieces of eggs" or anything else.
+	
 	var dishes = [{
 		/*DISH 1 of 10*/
 		'id':1,
