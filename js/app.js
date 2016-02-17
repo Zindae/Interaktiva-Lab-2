@@ -45,14 +45,29 @@ $(document).ready(function(){
 	// Function to detect click on single food course main1view1. On click, show main1view2.
 	// Problem: Need either 1 view for each course or generate new views each time with clicked data.
 	
-	// $('.main1view1').delegate('div','click',function() {
-		// $('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-		// $('.main1').show(); 
-		// $('.start-page, .main1view1, .main2').hide();
-
-		//console.log($('main1view1').get( 0 ));
-		//$(".main1view2").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
+	$('.main1view1').delegate('div','click',function() {
+		$(".main1view2").html()
 		
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view1, .main2').hide();
+		
+		//var selected_html = ed.selection.getContent();
+		//var $name = $elem.filter('name');
+		//console.log($name);
+		var temp1 = $('#3').attr('id');
+		console.log(temp1);
+		var name = allRecipes[temp1];
+		
+		$(".main1view2").append('<button id="back">Back to Dishes</button>')
+		$(".main1view2").append('<button id="confirmDish">Confirm Dish</button>')
+		$(".main1view2").append('<div id="'+temp1+'" class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
+
+		// $( "div" ).text( temp );
+		//console.log($('main1view2').get( 0 ));
+		//$(".main1view2").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p><p>'+name.description+'</p></div>');
+	
+	});
 		
 		
 		
@@ -73,10 +88,12 @@ $(document).ready(function(){
 		var outputDish = allRecipes[i];
 	
 		//Creates DIV with recipe info.
+
 		$(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.id+'" ><img class="icon" src="./images/'+outputDish.image+'"><a href="#" data-toggle="popover" data-trigger="focus" title="'+outputDish.name+'" data-content="'+outputDish.description+'"><p><b>'+outputDish.name+'</b></p></a></div>');
 
+
 		//$(".main1view1").append('<a href="#" data-toggle="popover" title="'+name.name+'" data-content="'+name.description+'">123</a>');
-		//$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p></div>');
+		$(".main1view1").append('<div id="'+i+'" class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p></div>');
 
 	};
 
