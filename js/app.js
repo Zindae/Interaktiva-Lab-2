@@ -60,24 +60,85 @@ $(document).ready(function(){
 	
 	// All recipes 
 	var allRecipes = model.getAll();
+	console.log(allRecipes);
 	
 	// Length of the array for the FOR loop
 	var len = allRecipes.length;
+	// console.log(len);
 	
 	//Iterates through every recipe in dinnerModel.js
 	for(i = 0; i < len; i++){
 		
 		// Gets specific recipe
-		var name = allRecipes[i];
+		var outputDish = allRecipes[i];
 	
 		//Creates DIV with recipe info.
-		$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><a href="#" data-toggle="popover" data-trigger="focus" title="'+name.name+'" data-content="'+name.description+'"><p><b>'+name.name+'</b></p></a></div>');
+		$(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.id+'" ><img class="icon" src="./images/'+outputDish.image+'"><a href="#" data-toggle="popover" data-trigger="focus" title="'+outputDish.name+'" data-content="'+outputDish.description+'"><p><b>'+outputDish.name+'</b></p></a></div>');
 
 		//$(".main1view1").append('<a href="#" data-toggle="popover" title="'+name.name+'" data-content="'+name.description+'">123</a>');
 		//$(".main1view1").append('<div class="col-xs-2"><img class="icon" src="./images/'+name.image+'"><p><b>'+name.name+'</b></p></div>');
 
 	};
-	/////////////// MAINVIEW END //////////////
+
+
+
+
+
+
+	$('.main1view1dishes').click(function(){
+	
+		var dishID = $(this).attr('id');
+		// click div w/.main1view1dishes
+		// => display main1view2
+		// $(.main1view2) append
+
+		// click div.
+
+		// append append (allRecipes(div#id)) to main1view2
+		$(".main1view2").append('<div class=" col-xs--6  main1-view2-dish "> \
+									<img class="icon" src="./images/'+allRecipes[dishID.image]+'">\
+									<p>'+allRecipes[dishID.description]+'</p>\	
+									<button>back to Select Dishes</button>\
+								</div>\
+								<div class=" col-xs--6  main1-view2-ingr ">\
+									<p>'+allRecipes[dishID.ingredients]+'</p>\	
+									<button>Confirm Dish</button>\
+								</div>\
+								<div class=" col-xs--6  main1-view2-prep ">\
+								\
+								</div>');
+			
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view2, .main2').hide();
+	
+
+
+// <div class="col-xs-6">
+// 	<img src="images/toast.jpg">
+// 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p>
+// 	<button>back to Select Dishes</button>
+// </div>
+// <div class="col-xs-6">
+// 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+// 	<button>Confirm Dish</button>
+// </div>
+// <div class="clearfix"></div>
+// <div class="col-xs-6">
+// 	<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+// </div>
+
+
+
+
+
+
+
+
+
+
+
+	/////////////// MAIN1VIEW1 END //////////////
 });
 
 	
