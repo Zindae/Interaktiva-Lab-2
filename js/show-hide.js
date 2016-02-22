@@ -4,7 +4,7 @@ $(document).ready(function(){
 		// short css 'display' reset before each hide/show in order to prevent
 		// conflicts since hide/show is abstracted under jquery.
         
-        $('#create-dinner, #confirm-dinner, #main2-go-back, #back, #confirmDish, #print-recipe, #button1, #button2, #button3, #button4, #button5').click(function() {        
+        $('#create-dinner, #confirm-dinner, #main2-go-back, #back, #confirm-dish, #print-recipe, #button1, #button2, #button3, #button4, #button5').click(function() {        
              
 			 
 			 
@@ -21,8 +21,7 @@ $(document).ready(function(){
        	case 'button2':
             case 'create-dinner':
 		case 'back':
-       	case 'confirmDish':
-		case 'main2-go-back':
+       	case 'confirm-dish':
        		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
        		$('.main1').show(); 
        		$('.start-page, .main1view2, .main2').hide();
@@ -38,6 +37,7 @@ $(document).ready(function(){
        	// main2view1
        	case 'button4':
 		case 'confirm-dinner':
+            case 'main2-go-back':
 				$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 				$('.main2').show(); 
        		$('.start-page, .main2view2, .main1').hide();

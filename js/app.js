@@ -51,6 +51,9 @@ $(document).ready(function(){
 	// 1. START-PAGE
 	// 		=> CREATE_MENU
 	// start-page button on click => create menu-object
+		// var model = $('#create-dinner').click(
+		// 	new DinnerModel(); + CHANGE_VIEW__
+		// 	);
 
 	
 	// 2. SIDE-VIEW
@@ -60,34 +63,31 @@ $(document).ready(function(){
 		// var inputForm = document.getElementById("myInput");
 		// var inputNumber = inputForm.value;
 		// $('#input').click(console.log(inputValue.value)); 
-	// model.setNumberOfGuests = $('#number-of-people').value;
+		// model.setNumberOfGuests = $('#number-of-people').value;
 
 
 	// 		=> CONFIRM_DINNER
-	// $('#confirm-dinner').click(function() {
-	// 	if () {
-
-	// 	} else if {
-
-	// 	} else {
-
-	// 	};
-	// });
+		// $('#confirm-dinner').click(function() {
+		// 	if (ingaRätterIsValda) {
+		//	OverView(model.menu); + CHANGE_VIEW__
+		// 	} else {
+		// alert("You have to choose a dish")
+		// 	};
+		// });
 	
 	// 3. SEARCH-VIEW
 	// 		=> TYPE_IN_SEARCH
-		// 
 	$('#search').keyup(function() {
 		var searchField = $('#search').val();
 		var myExp = new RegExp(searchField, "i");
-		// $.getJSON('data.json', function(data) {
 			var output = '<ul class="searchresults">';
-			
 			$.each(allRecipes, function(key, val) {
-				// console.log(val); wrx
-
 				if (val.name.search(myExp) != -1){
 					console.log(val);
+
+					// HERE THE MATCHING ELEMENTS ARE PASSED TO SELECTION-VIEW //
+					// TYP: SelectionView.update( searchResults )
+
 					// output += '<li>';
 					// output += '<h2>'+ val.name +'</h2>';
 					// output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="'+ val.name +'" />';
@@ -96,25 +96,46 @@ $(document).ready(function(){
 				}
 			});
 			// output += '</ul>';
-			// $('#update').html(output);
-		// }); //get JSON
+			
+		
 	});
 
 	// 		=> SELECT_TYPE_IN_DROP_DOWN
-	
+		// First, you have a var typeSet = undefined;
+		// then, if type is Set => typeSet = theType;
+		// => then you create an array with each dish that has the specific type
+		// then only these search results will show up in the search when you type.
+		// but you have to do the type filtering before one can search...
+		
 	// 4. SELECTION-VIEW
 	// 		=> SELECT_DISH
+		// So, the div that you click's ID is passed to PrepView...
+		// $('.main1view1dishes').click(function(){
+		// 		var dishID = $(this).attr('id');
+		// 		PrepView.(dishId); + CHANGE_VIEW__
 	
 	// 5. DISH-VIEW
 	// 		=> GO_BACK
+		// visually: go back to SelectionView  + CHANGE_VIEW__
+		// shouldn't do anything else.
+		// however, it depends on where the 'Pending' state should be set.
 	// 		=> CONFIRM_DISH
+		// confirm dish should add the dish to the models menu-array
+		// $('confirm-dish').click(addDishToMenu( theDish ));  + CHANGE_VIEW__
 	
 	// 6. OVER-VIEW
 	// 		=> GO_BACK_AND_EDIT
+		// + CHANGE_VIEW__
+		//
 	// 		=> PRINT_FULL_RECIPE
+		// $('#print-recipe').click(PrepView(model.menu));
+		//   + CHANGE_VIEW__
+
 
 	// 7. PREP-VIEW
 	// 		=> GO_BACK_TO_OVERVIEW
+		// $('#main2-go-back').click( goBackTo(OverView) );
+		//   + CHANGE_VIEW__
 
 
 
