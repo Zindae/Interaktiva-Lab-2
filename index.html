@@ -40,7 +40,7 @@
 			
 			
 			<!-- Knapp för att scrolla ner till nästa view-->
-			<button id="button2">Click to start!</button>
+			<button id="create-dinner">Click to start!</button>
 
 		</div> <!-- </center> --> <!-- start-page -->
 
@@ -54,7 +54,7 @@
 					<h4>My Dinner</h4>
 						<div class="side-view-people-selection">
 							<p>People</p>
-							<input class="input-people" type="number" step="1" value="1">
+							<input class="input-people" id="number-of-people" type="number" step="1" value="1">
 						</div>
 						<div class="side-view-dish-name-and-cost">
 							<span class="side-view-dish-name">Dish Name</span><span class="side-view-dish-cost">Cost</span>
@@ -73,7 +73,7 @@
 						</div>
 						<div class="side-view-total-cost-and-confirm">
 							<p>SEK <span class="sideview-display-total-cost"></span></p>
-							<button id="confirmDinner">Confirm Dinner</button>
+							<button id="confirm-dinner">Confirm Dinner</button>
 						</div>
 				</div>	<!-- main1sideview -->
 
@@ -95,7 +95,7 @@
 							  <option>No-Lactose</option>
 							  <option>No-Gluten</option>
 							</select>
-							<input name="SEARCH" type="text" class="form-control" placeholder="Search courses">
+							<input name="search" type="text" class="form-control" id="search" placeholder="Search courses">
 							<br>
 							<input name="search-btn" id="searchCourse" type="submit" class="btn" value="Search"/>
 							<br>
@@ -219,7 +219,7 @@
 	<!-- 		<script src="https://code.jquery.com/jquery.js"></script> -->
 			<!-- The application JavaScript code -->
 			<script src="js/app.js"></script>
-			<script src="js/view/view.js"></script>
+			<script src="js/show-hide.js"></script>
 			<script src="js/model/dinnerModel.js"></script>
 			<!--<script src="js/view/exampleView.js"></script> -->
 			<!-- <script src="js/view/exampleViewController.js"></script> -->

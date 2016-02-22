@@ -1,54 +1,51 @@
-$(document).ready(function(){ 
-		
-		// ==> SHOW & hide used to display each 'page'
-		// short css 'display' reset before each hide/show in order to prevent
-		// conflicts since hide/show is abstracted under jquery.
-        
-        $('#confirmDinner, #main2-go-back, #back, #confirmDish, #print-recipe, #button1, #button2, #button3, #button4, #button5').click(function() {        
-             
-			 
-			 
-             switch(this.id) {
-             	
-             	// start-page
-             	case 'button1': 
-             		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-             		$('.start-page').show(); 
-             		$('.main1, .main2').hide();
-             		break; 
-             	
-             	// main1view1
-             	case 'button2':
-				case 'back':
-             	case 'confirmDish':
-				case 'main2-go-back':
-             		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-             		$('.main1').show(); 
-             		$('.start-page, .main1view2, .main2').hide();
-             		break; 
-             		
-             	// main1view2
-             	case 'button3':
-					$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-					$('.main1').show(); 
-             		$('.start-page, .main1view1, .main2').hide();
-             		break; 
-             		
-             	// main2view1
-             	case 'button4':
-				case 'confirmDinner':
-					$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-					$('.main2').show(); 
-             		$('.start-page, .main2view2, .main1').hide();
-             		break; 
+var ExampleView = function (container) {
+      
+      // Get all the relevant elements of the view (ones that show data
+      // and/or ones that responed to interaction)
+      this.numberOfGuests = container.find("#numberOfGuests");
+      this.plusButton = container.find("#plusGuest");
+      this.minusButton = container.find("#minusGuest");
+      
+      this.numberOfGuests.html("Hello World");
+      
+}
+ 
+var SideView = function (container) {
+};
+var SearchView = function (container) {
+};
+var SelectionView = function (container) {
+};
+var DishView = function (container) {
+};
+var OverView = function (container) {
+};
+var PrepView = function (container) {
+};
+      // 1. START-PAGE
+      //          => CREATE_MENU
+      
+      // 2. SIDE-VIEW
+      //          => SET_NUMBER_OF_PEOPLE
+      //          => CONFIRM_DINNER
+      
+      // 3. SEARCH-VIEW
+      //          => TYPE_IN_SEARCH
+      //          => SELECT_TYPE_IN_DROP_DOWN
+      
+      // 4. SELECTION-VIEW
+      //          => SELECT_DISH
+      
+      // 5. DISH-VIEW
+      //          => GO_BACK
+      //          => CONFIRM_DISH
+      
+      // 6. OVER-VIEW
+      //          => GO_BACK_AND_EDIT
+      //          => PRINT_FULL_RECIPE
 
-             	// main2view2
-             	case 'button5':
-				case 'print-recipe':
-					$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-					$('.main2').show(); 
-             		$('.start-page, .main2view1, .main1').hide();
-             		break; 
-				}
-		});
-});
+      // 7. PREP-VIEW
+      //          => GO_BACK_TO_OVERVIEW
+
+
+

@@ -1,6 +1,5 @@
-var model
 $(document).ready(function(){        
-	
+	var model	
 	// Get DinnerModel function
 	model = new DinnerModel();
 	
@@ -9,7 +8,8 @@ $(document).ready(function(){
 	
 	// All recipes 
 	var allRecipes = model.getAll();
-	
+	console.log(allRecipes);
+
 	// Length of the array for the FOR loop
 	var len = allRecipes.length;
 	
@@ -46,4 +46,85 @@ $(document).ready(function(){
 		$('.main1').show(); 
  		$('.start-page, .main1view1, .main2').hide();
 	});
+
+
+	// 1. START-PAGE
+	// 		=> CREATE_MENU
+	// start-page button on click => create menu-object
+
+	
+	// 2. SIDE-VIEW
+	// 		=> SET_NUMBER_OF_PEOPLE 
+		// stepDown(), stepUp()
+		// model.setNumberOfGuests = input.value
+		// var inputForm = document.getElementById("myInput");
+		// var inputNumber = inputForm.value;
+		// $('#input').click(console.log(inputValue.value)); 
+	// model.setNumberOfGuests = $('#number-of-people').value;
+
+
+	// 		=> CONFIRM_DINNER
+	// $('#confirm-dinner').click(function() {
+	// 	if () {
+
+	// 	} else if {
+
+	// 	} else {
+
+	// 	};
+	// });
+	
+	// 3. SEARCH-VIEW
+	// 		=> TYPE_IN_SEARCH
+		// 
+	$('#search').keyup(function() {
+		var searchField = $('#search').val();
+		var myExp = new RegExp(searchField, "i");
+		// $.getJSON('data.json', function(data) {
+			var output = '<ul class="searchresults">';
+			
+			$.each(allRecipes, function(key, val) {
+				// console.log(val); wrx
+
+				if (val.name.search(myExp) != -1){
+					console.log(val);
+					// output += '<li>';
+					// output += '<h2>'+ val.name +'</h2>';
+					// output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="'+ val.name +'" />';
+					// output += '<p>'+ val.bio +'</p>';
+					// output += '</li>';
+				}
+			});
+			// output += '</ul>';
+			// $('#update').html(output);
+		// }); //get JSON
+	});
+
+	// 		=> SELECT_TYPE_IN_DROP_DOWN
+	
+	// 4. SELECTION-VIEW
+	// 		=> SELECT_DISH
+	
+	// 5. DISH-VIEW
+	// 		=> GO_BACK
+	// 		=> CONFIRM_DISH
+	
+	// 6. OVER-VIEW
+	// 		=> GO_BACK_AND_EDIT
+	// 		=> PRINT_FULL_RECIPE
+
+	// 7. PREP-VIEW
+	// 		=> GO_BACK_TO_OVERVIEW
+
+
+
+
+
+
+
+
+
+
+
+
 });
