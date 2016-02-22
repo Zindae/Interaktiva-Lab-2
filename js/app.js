@@ -51,9 +51,14 @@ $(document).ready(function(){
 	// 1. START-PAGE
 	// 		=> CREATE_MENU
 	// start-page button on click => create menu-object
+		$('#create-dinner').click(function(){
+			$('#body').css('background-color','white');
+		});
 		// var model = $('#create-dinner').click(
 		// 	new DinnerModel(); + CHANGE_VIEW__
 		// 	);
+		// + make background white
+
 
 	
 	// 2. SIDE-VIEW

@@ -20,8 +20,11 @@ Reset
 ***************************************************/
 
 html {
-	/*background-image: url(../images/home-background.jpg);*/
+	background-image: url(../images/home-background.jpg);
 	font-style: Helvetica;	
+}
+body {
+	background-color: transparent;
 }
 /***************************************************
 Text & Fonts
