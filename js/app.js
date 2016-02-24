@@ -57,7 +57,7 @@ $(document).ready(function(){
 			$(".main1view2ingredients > div").html('');
 			for(i = 0; i < len; i++){
 				var ingredients = oneRecipe.ingredients[i];
-				$(".main1view2ingredients > div").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
+				$(".main1view2ingredients > div").append('<div class=" col-xs-12  main1-view2-ingr "><b>' + ingredients.quantity+' '+ ingredients.unit+'</b> '+ingredients.name+ ' -- '+ ingredients.price + ' SEK</div><br>');
 			}
 			}
 		);
@@ -193,7 +193,7 @@ $(document).ready(function(){
 		
 		
 		var temp = model.getDishPrice(dishID);
-		$(".dish-name").append('<br>'+oneDish.name+', ' + temp + ' SEK')
+		$(".dish-name").append(''+oneDish.name+', ' + temp + ' SEK<br>')
 		
 		
 		// count1 = count;
