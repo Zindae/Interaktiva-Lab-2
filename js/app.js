@@ -4,10 +4,9 @@ $(document).ready(function(){
 	
 	model = new DinnerModel();
 	
-	$.each( model.menu , function(key, val) {
-		console.log(key + ": " + val);
-	});
-	
+	// confirms that we can acces menu
+	console.log(model.menu);
+
 	// Sideview List
 	var confirmedDish = [];
 	
@@ -46,7 +45,7 @@ $(document).ready(function(){
 		// $(".main1view2").html();
 
 		// main1view2 col1
-		$(".main1view2dishname > div").html('<div class=" col-xs-6  main1-view2-dish "><h2>' + oneRecipe.name + '</h2><img class="icon" src="./images/' + oneRecipe.image + '"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
+		$(".main1view2dishname > div").html('<div class=" col-xs-6  main1-view2-dish" id="' + dishID + '"><h2>' + oneRecipe.name + '</h2><img class="icon" src="./images/' + oneRecipe.image + '"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
 
 		// main1view2 col2
 		// $(".main1view2ingredients > div").html('<div class=" col-xs-6  main1-view2-prep "><h3>'+ oneRecipe.type +'</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
@@ -100,11 +99,19 @@ $(document).ready(function(){
 
 	// 		=> CONFIRM_DINNER // NOT FINISHED
 		$('#confirm-dinner').click(function() {
-			if (model.menu !== []) {
-			// OverView(model.menu); + CHANGE_VIEW__
-			} else {
-		alert("You have to choose a dish")
-			};
+			// $.each(model.menu, function(key, val) {
+				// 	if (key[val] === undefined) {
+				// 		alert("You have to choose three dishes.")
+				// 		return 
+				// 	} else {
+
+				// 		console.log('dishes are set!')
+
+
+				// 	}
+				// })
+
+			
 		});
 	
 	// 3. SEARCH-VIEW
@@ -151,9 +158,21 @@ $(document).ready(function(){
 		// visually: go back to SelectionView  + CHANGE_VIEW__
 		// shouldn't do anything else.
 		// however, it depends on where the 'Pending' state should be set.
-	// 		=> CONFIRM_DISH
+	
+	// 		=> CONFIRM_DISH // WORKS
 		// confirm dish should add the dish to the models menu-array
 		// $('confirm-dish').click(addDishToMenu( theDish ));  + CHANGE_VIEW__
+
+	$('#confirm-dish').click(function(){
+		var dishID = $('.main1-view2-dish').attr('id');
+		var oneDish = model.getDish(dishID);
+		// console.log(oneDish.type);
+		// console.log(model.menu[ oneDish.type ]);
+		model.menu[ oneDish.type ] = oneDish.id;
+		console.log(model.menu[ oneDish.type ]);
+		console.log(model.menu);
+
+	})
 	
 	// 6. OVER-VIEW
 	// 		=> GO_BACK_AND_EDIT

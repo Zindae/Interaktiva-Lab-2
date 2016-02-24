@@ -38,16 +38,16 @@ $(document).ready(function(){
        	case 'button4':
 		case 'confirm-dinner':
             case 'main2-go-back':
-				$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-				$('.main2').show(); 
+			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+			$('.main2').show(); 
        		$('.start-page, .main2view2, .main1').hide();
        		break; 
 
        	// main2view2
        	case 'button5':
 		case 'print-recipe':
-				$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-				$('.main2').show(); 
+			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+			$('.main2').show(); 
        		$('.start-page, .main2view1, .main1').hide();
        		break; 
 			}

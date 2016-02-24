@@ -6,7 +6,8 @@ var DinnerModel = function() {
  
 
 	var numberOfGuests;
-	var menu = {'starter':1, 'main dish':2, 'dessert':3};
+	
+	this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
 
 	this.setNumberOfGuests = function(num) {
 		// Väljer hur många människor som kommer (knapp Up-down / sideview)
