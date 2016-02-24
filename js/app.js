@@ -1,7 +1,12 @@
 $(document).ready(function(){        
-	var model	
-	// Get DinnerModel function
+	
+	var model;	
+	
 	model = new DinnerModel();
+	
+	$.each( model.menu , function(key, val) {
+		console.log(key + ": " + val);
+	});
 	
 	// Sideview List
 	var confirmedDish = [];
@@ -31,20 +36,38 @@ $(document).ready(function(){
 		var ingredients = oneRecipe.ingredients[0];
 		var len = oneRecipe.ingredients.length;
 		
-		for(i = 0; i < len; i++){
-			var ingredients = oneRecipe.ingredients[i];
-			$(".main1view2info").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
-		}
-		
-		$(".main1view2").append('<div class=" col-xs-6  main1-view2-dish "><h2>' + oneRecipe.name + '</h2><img class="icon" src="./images/' + oneRecipe.image + '"><h4>' + oneRecipe.description + '</h4><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
+		// for(i = 0; i < len; i++){
+		// 	var ingredients = oneRecipe.ingredients[i];
+		// 	$(".main1view2info").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
+		// }
 		
 
 
-		$(".main1view2").append('<div class=" col-xs-6  main1-view2-prep "><h3>'+ oneRecipe.type +'</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
+		// $(".main1view2").html();
+
+		// main1view2 col1
+		$(".main1view2dishname > div").html('<div class=" col-xs-6  main1-view2-dish "><h2>' + oneRecipe.name + '</h2><img class="icon" src="./images/' + oneRecipe.image + '"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
+
+		// main1view2 col2
+		// $(".main1view2ingredients > div").html('<div class=" col-xs-6  main1-view2-prep "><h3>'+ oneRecipe.type +'</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
+		$(".main1view2ingredients > div").html(function() {
+			for(i = 0; i < len; i++){
+				var ingredients = oneRecipe.ingredients[i];
+				$(".main1view2info").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
+			}
+			}
+		);
+		
+		// main1view2 col3
+		$(".main1view2preparation > div").html('<div class=" col-xs-6  main1-view2-prep "><h3>Preparation</h3><h4>' + oneRecipe.description + '</h4></div>');
+
 
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
  		$('.start-page, .main1view1, .main2').hide();
+
+
+
 	});
 
 
@@ -65,27 +88,31 @@ $(document).ready(function(){
 	// 		=> SET_NUMBER_OF_PEOPLE 
 		// stepDown(), stepUp()
 		// model.setNumberOfGuests = input.value
-		// var inputForm = document.getElementById("myInput");
-		// var inputNumber = inputForm.value;
+		// var inputForm = document.getElementById("#number-of-people");
+		// var numberOfPeople = inputForm.value;
 		// $('#input').click(console.log(inputValue.value)); 
 		// model.setNumberOfGuests = $('#number-of-people').value;
+	$('#number-of-people').change(function() {
+		model.setNumberOfGuests(this.value);
+		console.log(model.getNumberOfGuests());
+	});
+		
 
-
-	// 		=> CONFIRM_DINNER
-		// $('#confirm-dinner').click(function() {
-		// 	if (ingaRätterIsValda) {
-		//	OverView(model.menu); + CHANGE_VIEW__
-		// 	} else {
-		// alert("You have to choose a dish")
-		// 	};
-		// });
+	// 		=> CONFIRM_DINNER // NOT FINISHED
+		$('#confirm-dinner').click(function() {
+			if (model.menu !== []) {
+			// OverView(model.menu); + CHANGE_VIEW__
+			} else {
+		alert("You have to choose a dish")
+			};
+		});
 	
 	// 3. SEARCH-VIEW
 	// 		=> TYPE_IN_SEARCH
 	$('#search').keyup(function() {
 		var searchField = $('#search').val();
 		var myExp = new RegExp(searchField, "i");
-			var output = '<ul class="searchresults">';
+			// var output = '<ul class="searchresults">';
 			$.each(allRecipes, function(key, val) {
 				if (val.name.search(myExp) != -1){
 					console.log(val);
@@ -144,13 +171,34 @@ $(document).ready(function(){
 
 
 
+	// ###### testar modellen #######################################################################################
+
+	TestModel = new DinnerModel();
+
+	// testar setNumberOfGuests och getNumberOfGuests	
+	TestModel.setNumberOfGuests(5);
+	console.log("number of guests in TestModel are: " + TestModel.getNumberOfGuests());
+	
+	// testar getAll
+	var allDishes = TestModel.getAll();
+	console.log(allDishes);
+
+	// testar
+	var aDish = TestModel.getDish(3);
+	console.log("And the dish is: " + aDish.name);
 
 
+	// test get dishes by filter & type test
+	var allStarters = TestModel.getAllDishes("dessert");
+	$.each(allStarters, function(key, val) {
+		console.log(key + ": " + val.name);
+	});
 
-
-
-
-
-
+	var allIngredients = TestModel.getAllIngredients();
+	// $.each(allIngredients, function(key, val) {
+	// 	// console.log(key + ": " + val);
+	// 	console.log("we're in  allIngredients loop!");
+	// })
+	// console.log(allIngredients);
 
 });

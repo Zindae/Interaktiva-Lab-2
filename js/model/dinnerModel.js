@@ -1,8 +1,12 @@
 //DinnerModel Object constructor DATA
+// console.log("");
+
+
 var DinnerModel = function() {
  
+
 	var numberOfGuests;
-	var confirmedDish = [];
+	var menu = {'starter':1, 'main dish':2, 'dessert':3};
 
 	this.setNumberOfGuests = function(num) {
 		// Väljer hur många människor som kommer (knapp Up-down / sideview)
@@ -47,10 +51,36 @@ var DinnerModel = function() {
 	
 	//Returns all ingredients for all the dishes on the menu.
 	this.getAllIngredients = function() {
-		for(i in dishes.ingredients){
-			return dishes.ingredients;
-		}
+		var i, 
+			j, 
+			dish,
+			ingredients;
+
+		for (i in dishes) {
+
+			dish = dishes[i];
+			
+			for (j in dish.ingredients) {
+				ingredients = dish.ingredients[j]
+
+				// $.each(ingredients, function(key, val) {
+				// 	console.log(key + ": " + val);
+				// });
+			}
+		}	
 	}
+
+	// //Returns all ingredients for all the dishes on the menu.
+	// this.getAllIngredients = function() {
+	// 	for (i in dishes) {
+	// 		for (j in dishes.ingredients) {
+			
+	// 			return j;	
+	// 		}
+	// 	}
+	// };
+
+
 
 	
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
@@ -71,23 +101,24 @@ var DinnerModel = function() {
 				found = true;
 			}
 		}
-	  	return dish.type == type && found;
+	  	return dish.type == type && found; // WORKS
 	  });	
 	}
 
-	//function that returns a dish of specific ID
+
+	// Returns dish object of specific ID
 	this.getDish = function (id) {
 	  for(key in dishes){
 			if(dishes[key].id == id) {
-				return dishes[key];
+				return dishes[key];  // WORKS
 			}
 		}
 	}
 	
-	// Gets All Recipes
+	// Returns array with recipe objects
 	this.getAll = function () {
 		for(i in dishes)
-			return dishes;
+			return dishes;  // WORKS
 	}
 	
 	
