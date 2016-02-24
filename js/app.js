@@ -9,6 +9,7 @@ $(document).ready(function(){
 
 	// Sideview List
 	var confirmedDish = [];
+	var count = 0;
 	
 	// All recipes 
 	var allRecipes = model.getAll();
@@ -35,6 +36,9 @@ $(document).ready(function(){
 		var ingredients = oneRecipe.ingredients[0];
 		var len = oneRecipe.ingredients.length;
 		
+		//var val = 3;
+
+
 		// for(i = 0; i < len; i++){
 		// 	var ingredients = oneRecipe.ingredients[i];
 		// 	$(".main1view2info").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
@@ -50,9 +54,10 @@ $(document).ready(function(){
 		// main1view2 col2
 		// $(".main1view2ingredients > div").html('<div class=" col-xs-6  main1-view2-prep "><h3>'+ oneRecipe.type +'</h3><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut.</p></div>');
 		$(".main1view2ingredients > div").html(function() {
+			$(".main1view2ingredients > div").html('');
 			for(i = 0; i < len; i++){
 				var ingredients = oneRecipe.ingredients[i];
-				$(".main1view2info").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
+				$(".main1view2ingredients > div").append('<div class=" col-xs-2  main1-view2-ingr ">' + ingredients.quantity, ingredients.unit, ingredients.name, ingredients.price + '</div><br>');
 			}
 			}
 		);
@@ -95,7 +100,8 @@ $(document).ready(function(){
 		model.setNumberOfGuests(this.value);
 		console.log(model.getNumberOfGuests());
 	});
-		
+	
+
 
 	// 		=> CONFIRM_DINNER // NOT FINISHED
 	$('#confirm-dinner').click(function() {
@@ -112,7 +118,7 @@ $(document).ready(function(){
 			// })
 
 		var starter = model.getDish(model.menu['starter']);
-		console.log(starter);
+		//console.log(starter);
 		var main = model.getDish(model.menu['main dish']);
 		var dessert = model.getDish(model.menu['dessert']);
 			// var theDiv = $.this;
@@ -120,6 +126,9 @@ $(document).ready(function(){
 		$(".middle").append('<div class=" col-xs-2 "><img class="icon" src="./images/' + starter.image + '"></div>');
 		$(".middle").append('<div class=" col-xs-2 "><img class="icon" src="./images/' + main.image + '"></div>');
 		$(".middle").append('<div class=" col-xs-2 "><img class="icon" src="./images/' + dessert.image + '"></div>');
+		
+		var total = model.getTotalMenuPrice(model.menu)
+		$(".right").append('Totalt pris för meny = ' +total+ 'SEK');
 	
 	
 		
@@ -177,11 +186,26 @@ $(document).ready(function(){
 	$('#confirm-dish').click(function(){
 		var dishID = $('.main1-view2-dish').attr('id');
 		var oneDish = model.getDish(dishID);
-		// console.log(oneDish.type);
-		// console.log(model.menu[ oneDish.type ]);
+
 		model.menu[ oneDish.type ] = oneDish.id;
 		console.log(model.menu[ oneDish.type ]);
 		console.log(model.menu);
+		
+		
+		var temp = model.getDishPrice(dishID);
+		$(".dish-name").append('<br>'+oneDish.name+', ' + temp + ' SEK')
+		
+		
+		// count1 = count;
+		// count = count1 + 1;		
+		
+		
+		// console.log('count:' +count+ '');
+		// if (count = 3){
+			// $(".dish-name").html('')
+			// count = 0
+		// }
+		
 
 	})
 	

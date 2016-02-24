@@ -201,6 +201,7 @@ main1view2
 }
 .main1view2ingredients {
 	background-color: #53aad3;
+	padding-bottom: 20px;
 }
 .main1view2preparation {
 	background-color: #ad22d3;
@@ -237,7 +238,7 @@ Buttons
 #back, #confirm-dish {
 	position: absolute;
 	left:    25;
-	bottom:   0;
+	bottom:   -40;
 
 }
 
