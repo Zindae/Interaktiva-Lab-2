@@ -1,9 +1,11 @@
 var SideView = function (container, model) {
-	this.updateDisplay = function(id) {
+	this.updateDisplay = function() {
 				// HOW TO ITERATE OBECT IN JAVASCRIPT
 		// for (var key in model.menu) {
 		// 	console.log(key, model.menu[key]);
 		// }
+		
+		
 		var id;
 		this.dishDiv = container.find('.sideview-dish');
 		this.dishDiv.html('');
@@ -12,7 +14,7 @@ var SideView = function (container, model) {
 			id = model.menu[key];
 			// console.log(id);
 			// console.log(model.getDish(id));
-			this.dishDiv.append( model.getDish(id).name +', ' + model.getDishPrice(id) + ' SEK<br>');
+			this.dishDiv.append(model.getDish(id).name +', ' + model.getDishPrice(id) + ' SEK<br>');
 		}
 
 

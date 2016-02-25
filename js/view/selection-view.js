@@ -1,5 +1,4 @@
 var SelectionView = function (container, model) {
-      // All recipes 
 
       var allRecipes = model.getAll();
       // console.log(allRecipes);
@@ -16,5 +15,5 @@ var SelectionView = function (container, model) {
             //Creates DIV with recipe info.
 
             $(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.id+'" ><img class="icon" src="./images/'+outputDish.image+'"><a href="#" data-toggle="popover" data-trigger="focus" title="'+outputDish.name+'" data-content="'+outputDish.description+'"><p><b>'+outputDish.name+'</b></p></a></div>');
-      };
+	};
 };

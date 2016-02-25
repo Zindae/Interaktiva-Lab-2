@@ -9,9 +9,13 @@ $(document).ready(function(){
 	var overView 		= new OverView( $('.main2view1'), model );
 	var prepView 		= new PrepView( $('main2view2'), model );
 
+	//model.subscribe(sideView.updateDisplay);
+	//model.subscribe(dishView.updateDisplay);
+	
 	// start app
 	$('#create-dinner').click(function(){
 		$('#body').css('background-color','white');
+		//selectionView.updateDisplay();
 	});
 
 	// clicking a dish in selectionView
@@ -20,12 +24,9 @@ $(document).ready(function(){
 		// var dishID = $(this).attr('id');
 		// id passed to dishView
 		dishView.updateDisplay( $(this).attr('id') );
-		
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
  		$('.start-page, .main1view1, .main2').hide();
-
-
 
 	});
 
@@ -39,7 +40,7 @@ $(document).ready(function(){
 
 	// confirm dinner
 	$('#confirm-dinner').click(function() {
-		overView.updateDisplay();		
+		overView.updateDisplay();
 	});
 	
 	// search filter
@@ -68,8 +69,8 @@ $(document).ready(function(){
 		var dishID = $('.main1-view2-dish').attr('id');
 		var oneDish = model.getDish(dishID);
 		model.menu[ oneDish.type ] = oneDish.id;
-		sideView.updateDisplay( dishID );
-		
+		sideView.updateDisplay();
+		//model.publish();
 	})
 	
 	// go to prepView
