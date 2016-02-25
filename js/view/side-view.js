@@ -9,6 +9,8 @@ var SideView = function (container, model) {
 				// console.log(id);
 				// console.log(model.getDish(id));
 				this.dishDiv.append('' +model.getDish(id).name +', ' + model.getDishPrice(id) + ' SEK<br>');
+				
+		// sideview-display-total-cost <- lägg till total cost här.
 			}
 		}
 	};
