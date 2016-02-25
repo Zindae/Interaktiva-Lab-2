@@ -20,13 +20,13 @@ var DinnerModel = function() {
 		return numberOfGuests;
 	}
 
-	//Returns the total price of the menu (all the ingredients multiplied by number of guests).
-	// this.getTotalMenuPrice = function(numberOfGuests, confirmedDish) {
-		// var len = confirmedDish.length;
-		
+	// //Returns the total price of the menu (all the ingredients multiplied by number of guests).
+	// this.getTotalMenuPrice = function(menu) {
+		// var len = menu.length;
+		// var ID = 1;
 		// for(i = 0; i < len; i++){
-			// var id = confirmedDish[i];
-			// var getDish(ID).ingredients(i);
+			// var id = menu[i];
+			// var getDish(ID).ingredients;
 			
 			// for(j = 0, j < len; j++){
 			
@@ -37,28 +37,47 @@ var DinnerModel = function() {
 	// }
 
 
-	this.getTotal = function() {
 
-		for (o,p in this.menu) {
-		console.log(this.menu[o]);
-	}
-		// for (o in this.menu)
-		// 		if(dishes[o].id == o) {
-		// 			return dishes[q];  // WORKS
-		// }
-			
-		var total, starterID, mainID, dessertID;
+	this.getDishPrice = function(val) {
+		
+		var priceArray = 0;
 
-
-		// $.each( this.menu , function(key, val) {
-		// 	d = getDish( key ).ingredients;
-		// 	console.log(d);
-
-
-		}
 	
-
-
+		var dish = this.getDish(val);
+		console.log(dish);
+			
+		var array2 = dish.ingredients;
+		for (i in array2){
+			var ing = array2[i].price;
+			console.log(ing);
+			priceArray += ing;
+			
+			
+		}
+		return priceArray;
+	};
+		
+	this.getTotalMenuPrice = function() {
+		var total = 0; 
+		for (i in this.menu) {
+			total += this.getDishPrice(this.menu[i]);
+		}
+		return total;
+	}
+	
+	
+	
+		// for(i = 0; i < len; i++){
+			
+			// var id = confirmedDish[i];
+			// var getDish(ID).ingredients(i);
+			
+			// for(j = 0, j < len; j++){
+			
+			// }
+			// var ingredients = getDish(i).ingredients[i];
+	
+>>>>>>> 1c26e5a1b0f53185db517a4860d03d8706092c66
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
 	
