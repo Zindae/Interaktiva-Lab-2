@@ -239,6 +239,8 @@ $(document).ready(function(){
 	});
 
 	var allIngredients = TestModel.getAllIngredients();
+
+	total = TestModel.getTotal();
 	// $.each(allIngredients, function(key, val) {
 	// 	// console.log(key + ": " + val);
 	// 	console.log("we're in  allIngredients loop!");

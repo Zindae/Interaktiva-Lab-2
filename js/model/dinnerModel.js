@@ -7,7 +7,8 @@ var DinnerModel = function() {
 
 	var numberOfGuests;
 	
-	this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
+	// this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
+	this.menu = {'starter':1, 'main dish':2, 'dessert':100};
 
 	this.setNumberOfGuests = function(num) {
 		// Väljer hur många människor som kommer (knapp Up-down / sideview)
@@ -34,6 +35,29 @@ var DinnerModel = function() {
 			
 		// }
 	// }
+
+
+	this.getTotal = function() {
+
+		for (o,p in this.menu) {
+		console.log(this.menu[o]);
+	}
+		// for (o in this.menu)
+		// 		if(dishes[o].id == o) {
+		// 			return dishes[q];  // WORKS
+		// }
+			
+		var total, starterID, mainID, dessertID;
+
+
+		// $.each( this.menu , function(key, val) {
+		// 	d = getDish( key ).ingredients;
+		// 	console.log(d);
+
+
+		}
+	
+
 
 	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
 	//it is removed from the menu and the new one added.
