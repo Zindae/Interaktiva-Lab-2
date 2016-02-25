@@ -53,7 +53,7 @@
 					
 					<h4>My Dinner</h4>
 						<div class="side-view-people-selection">
-							<p>People</p>
+							  People
 							<input class="input-people" id="number-of-people" type="number" step="1" value="1">
 						</div>
 						<div class="side-view-dish-name-and-cost">
@@ -63,33 +63,32 @@
 
 						</div>
 						<div class="side-view-total-cost-and-confirm">
-							<p>SEK <span class="sideview-display-total-cost"></span></p>
+							<p><b>Total cost: </b><span class="sideview-display-total-cost"></span></p>
 							<button id="confirm-dinner">Confirm Dinner</button>
 						</div>
 				</div>	<!-- main1sideview -->
 
 				<div class="main1content col-xs-10">			
 					<div class="row main1search">
-						<div class="col-xs-3">
-						<br>      
-				
+						<div class="col-xs-3 search">
+						<br>
+							<input name="search" type="text" class="form-control" id="search" placeholder="Search courses">
+							<br>
+							<input name="search-btn" id="searchCourse" type="submit" class="btn" value="Search"/>
 							<!--<button>This is a search bar.</button>
 							<button>This is a dropdown.</button>-->
 							
 							
 							<!-- JS kod för mjuk scroll: 
 							http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/ -->
-							
+						</div>
+						<div class="col-xs-3 form">
 							<select class="form-control">
 							  <option>Start</option>
 							  <option>Main Dish</option>
 							  <option>Dessert</option>
 							</select>
-							<input name="search" type="text" class="form-control" id="search" placeholder="Search courses">
 							<br>
-							<input name="search-btn" id="searchCourse" type="submit" class="btn" value="Search"/>
-							<br>
-						
 							<br>
 						</div>
 					</div>

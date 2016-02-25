@@ -3,14 +3,15 @@ var SideView = function (container, model) {
 		var id;
 		this.dishDiv = container.find('.sideview-dish');
 		this.dishDiv.html('');
+		
+		var price = 0;
 		for (var key in model.menu) {
 			if (model.menu[key] !== undefined) {
 				id = model.menu[key];
-				// console.log(id);
-				// console.log(model.getDish(id));
-				this.dishDiv.append('' +model.getDish(id).name +', ' + model.getDishPrice(id) + ' SEK<br>');
-				
-		// sideview-display-total-cost <- lägg till total cost här.
+				price = price + model.getDishPrice(id);
+				//console.log(price);
+				this.dishDiv.append('<div class="col-xs-8 dishname">' +model.getDish(id).name +'</div><div class="col-xs-4 dishcost">' + model.getDishPrice(id) + '</div>');
+				$(".sideview-display-total-cost").html(price+' SEK');
 			}
 		}
 	};

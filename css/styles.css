@@ -23,6 +23,8 @@ html {
 	background-image: url(../images/home-background.jpg);
 	font-style: Helvetica;	
 }
+
+
 body {
 	background-color: transparent;
 }
@@ -44,6 +46,7 @@ h1, h2, h3, h4, h5, h6 {
 	display: inline;
 }
 
+
 .demo-view-buttons {
 	float: right;
 }
@@ -58,14 +61,14 @@ h1, h2, h3, h4, h5, h6 {
 	display: all;
 	width: 600px;
     height: 300px;
-    background-color: beige;
+    background-color: rgba(253, 253, 253, 0.83);
     /*position: absolute;*/
     top:0;
     bottom: 0;
     left: 0;
     right: 0;
     margin: 241px 0px 241px 5px;
-    /*opacity: .5;*/
+    /* opacity: .5; */
 }
 
 
@@ -97,11 +100,11 @@ Header
 	position: fixed;
 	top: 0;
 	height: 100px;
-	background-color: beige;
+	background-color: rgba(245, 222, 111, 0.5);
 	z-index: 1;
 	/*margin:0px auto;*/
 	/*background: transparent;*/
-	/*opacity: .5;*/
+	/* background-opacity: .5; */
 }
 
 
@@ -109,6 +112,11 @@ Header
 /***************************************************
 Bootstrap Override
 ***************************************************/
+
+img { 
+   border:2px solid #021a40;
+}
+
 .main1, .main2 {
 	display: none;
 	margin-bottom: 0px;
@@ -127,19 +135,28 @@ Bootstrap Override
 	background-color: #4dd;
 }
 .main1view1 {
-	background-color: #C895E8
+	background-color: #C895E8;
+	image-border: solid;
 
+}
+
+.main1view1dishes{
+	margin-left: auto;
+	margin-right: auto;
+	height: 180px;
+	border: 1px solid grey;
+    justify-content: space-around;
 }
 .main1view2 {
-	background-color: #C2E8E2
+	background-color: #C2E8E2;
 }
 
-.main2view2 p {
+.main2view2{
 	background-color: pink;
 }
 
 .main1search {
-	background-color: lightred;
+	background-color: rgba(245, 222, 111, 1);
 }
 .container {
 	width: 100%;
@@ -153,34 +170,34 @@ Bootstrap Override
 /***************************************************
 Sideview
 ***************************************************/
-.side-view {
-	background-color: orange;
+.main1-sideview {
+	background-color: white;
 	padding-bottom: 100%;
-	margin: 0;
-	border: solid red;
+	border: solid black;
 }
 .side-view-people-selection {
 	display: block;
-	border: solid green;
 }
 
 .side-view-dish-name-and-cost {
 	display: block;
-	border: solid purple;
-}
-.side-view-dish-name {
-	position: left;
-}
-.side-view-dish-cost {
+	border: solid grey;
+	background: lightgrey;
+} 
+/* .side-view-dish-name {
+	position: absolute;
+} */
 
+.side-view-dish-cost {
+	position: absolute; 
+	right: 25px;
 }
 .side-view-pending-foods {
 	background-color: yellow;
 	border: solid green;
 }
 .side-view-total-cost-and-confirm {
-	border: solid magenta;
-	margin-top: 50px;
+	margin-top: 60%;
 }
 
 .pending-foods-in-sideview::after {
@@ -216,9 +233,38 @@ Search & Status-bar
 	background-color: #6AADB5;
 }
 
+.dishname {
+	padding: 1px;
+}
+
+.dishcost {
+	padding:2px;
+	text-align:right;
+}
+
 /***************************************************
 Buttons
 ***************************************************/
+
+ /* Search function */
+.btn {
+	margin-bottom: 10px;
+}
+
+
+	/* Form */
+
+/* .form-control{
+	margin-top: 50px;
+}	 */
+
+.input-people {
+	margin-top: 5px;
+	margin-left: 10px;
+	margin-bottom: 5px;
+	width: 50px;
+}
+	
 .print-recipe {
 	/*position: relative;
 
