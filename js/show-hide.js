@@ -4,7 +4,7 @@ $(document).ready(function(){
 		// short css 'display' reset before each hide/show in order to prevent
 		// conflicts since hide/show is abstracted under jquery.
         
-        $('#create-dinner, #confirm-dinner, #main2-go-back, #back, #confirm-dish, #print-recipe, #button1, #button2, #button3, #button4, #button5').click(function() {        
+      $('#create-dinner, #confirm-dinner, #go-back-to-edit, #back, #confirm-dish, #print-recipe, #button1, #button2, #button3, #button4, #button5, #go-back-to-overview').click(function() {        
              
 			 
 			 
@@ -22,6 +22,7 @@ $(document).ready(function(){
             case 'create-dinner':
 		case 'back':
        	case 'confirm-dish':
+            case 'go-back-to-edit':
        		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
        		$('.main1').show(); 
        		$('.start-page, .main1view2, .main2').hide();
@@ -29,15 +30,16 @@ $(document).ready(function(){
        		
        	// main1view2
        	case 'button3':
-				$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-				$('.main1').show(); 
+			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+			$('.main1').show(); 
        		$('.start-page, .main1view1, .main2').hide();
        		break; 
        		
        	// main2view1
        	case 'button4':
 		case 'confirm-dinner':
-            case 'main2-go-back':
+            case 'go-back-to-overview':
+            // case 'go-back-to-edit':
 			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 			$('.main2').show(); 
        		$('.start-page, .main2view2, .main1').hide();
@@ -50,6 +52,15 @@ $(document).ready(function(){
 			$('.main2').show(); 
        		$('.start-page, .main2view1, .main1').hide();
        		break; 
-			}
-		});
+		}
+	});
+
+      // $('.main1view1dishes').click(function(){
+
+      //       $('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+      //       $('.main1').show(); 
+      //       $('.start-page, .main1view1, .main2').hide();
+
+      // });
+
 });

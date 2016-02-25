@@ -10,6 +10,12 @@ var ExampleView = function (container) {
       
 }
 
+
+var SearchView = function (container) {
+      // maybe search view is a static view and shouldn't be instantiated as a View
+};
+
+
       // 1. START-PAGE
       //          => CREATE_MENU
       

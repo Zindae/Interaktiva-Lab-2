@@ -41,12 +41,12 @@ var DinnerModel = function() {
 
 	
 		var dish = this.getDish(val);
-		console.log(dish);
+		// console.log(dish);
 			
 		var array2 = dish.ingredients;
 		for (i in array2){
 			var ing = array2[i].price;
-			console.log(ing);
+			// console.log(ing);
 			priceArray += ing;
 			
 			
