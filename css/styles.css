@@ -184,7 +184,7 @@ Sideview
 }
 
 .pending-foods-in-sideview::after {
-		display: block;
+	display: block;
 	content: ""; 
 	/*..here, auto makes the element float in the middle but stay locked vertically*/
 	margin: .7em auto 0;
