@@ -3,19 +3,23 @@ $(document).ready(function(){
 	var model = new DinnerModel();
 	
 	var sideView 		= new SideView( $('.main1-sideview'), model );
-	var searchView 		= new SearchView( $('.main1search') );
+	//var searchView 		= new SearchView( $('.main1search') );
 	var selectionView = new SelectionView( $('.main1view1'), model );
 	var dishView 		= new DishView( $('.main1view2'), model );
 	var overView 		= new OverView( $('.main2view1'), model );
 	var prepView 		= new PrepView( $('main2view2'), model );
 
-	//model.subscribe(sideView.updateDisplay);
-	//model.subscribe(dishView.updateDisplay);
+	model.subscribe(sideView.updateDisplay);
+	//model.subscribe(searchView.updateDisplay);
+	model.subscribe(selectionView.updateDisplay);
+	model.subscribe(dishView.updateDisplay);
+	model.subscribe(overView.updateDisplay);
+	model.subscribe(prepView.updateDisplay);
 	
 	// start app
 	$('#create-dinner').click(function(){
 		$('#body').css('background-color','white');
-		//selectionView.updateDisplay();
+		model.update();
 	});
 
 	// clicking a dish in selectionView
@@ -23,7 +27,9 @@ $(document).ready(function(){
 		
 		// var dishID = $(this).attr('id');
 		// id passed to dishView
-		dishView.updateDisplay( $(this).attr('id') );
+		model.setDishID($(this).attr('id'));
+		console.log('x:',x);
+		model.update();
 		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 		$('.main1').show(); 
  		$('.start-page, .main1view1, .main2').hide();
@@ -40,7 +46,7 @@ $(document).ready(function(){
 
 	// confirm dinner
 	$('#confirm-dinner').click(function() {
-		overView.updateDisplay();
+		model.update();
 	});
 	
 	// search filter
@@ -69,13 +75,13 @@ $(document).ready(function(){
 		var dishID = $('.main1-view2-dish').attr('id');
 		var oneDish = model.getDish(dishID);
 		model.menu[ oneDish.type ] = oneDish.id;
-		sideView.updateDisplay();
+		model.update();
 		//model.publish();
 	})
 	
 	// go to prepView
 	$('#print-recipe').click(function() {
-		prepView.updateDisplay();
+		model.update();
 	});
 
 });

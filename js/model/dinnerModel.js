@@ -9,14 +9,18 @@ var DinnerModel = function() {
 	// *************OBSERVER *************//
 	
 	this.subscribers = [];
+	//console.log(this.subscribers);
 	
 	this.subscribe = function (fn) {
 		this.subscribers.push(fn);
+		// console.log('this.subscribers:', this.subscribers);
+		//console.log('fn:', fn);
+		//console.log('0 subscriber:', this.subscribers[0]);
 	};
 
 	this.update = function () {
 		var i, 
-			max = subscribers.length;
+			max = this.subscribers.length;
 
 		for (i = 0; i < max; i += 1) {
 			this.subscribers[i]();
@@ -27,8 +31,18 @@ var DinnerModel = function() {
 
 
 
-
+	var dishToDisplayInDishView;
 	var numberOfGuests;	
+	
+	this.setDishID = function(id){
+		console.log(dishToDisplayInDishView);
+		dishToDisplayInDishView = id;
+		console.log(dishToDisplayInDishView);
+	};
+	
+	this.getDishID = function() {
+		return dishToDisplayInDishView;
+	};
 	
 	this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
 

@@ -11,10 +11,12 @@ var SideView = function (container, model) {
 		this.dishDiv.html('');
 
 		for (var key in model.menu) {
-			id = model.menu[key];
-			// console.log(id);
-			// console.log(model.getDish(id));
-			this.dishDiv.append(model.getDish(id).name +', ' + model.getDishPrice(id) + ' SEK<br>');
+			if (model.menu[key] !== undefined) {
+				id = model.menu[key];
+				// console.log(id);
+				// console.log(model.getDish(id));
+				this.dishDiv.append(model.getDish(id).name +', ' + model.getDishPrice(id) + ' SEK<br>');
+			}
 		}
 
 
