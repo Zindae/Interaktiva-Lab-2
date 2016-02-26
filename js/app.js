@@ -32,6 +32,12 @@ $(document).ready(function(){
 		model.setNumberOfGuests(this.value);
 		model.update();
 	});
+	
+	$('#form-control').change(function() {
+		model.setFilterType(this.value.toLowerCase());
+		model.update();
+	});
+
 
 
 	// confirm dish
@@ -47,27 +53,27 @@ $(document).ready(function(){
 		model.update();
 	});
 
-});
 	
-	// search filter
-	// $('#search').keyup(function() {
+	//search filter
+	$('#search').keyup(function() {
 		// var allRecipes = model.getAll();
-		// var searchField = $('#search').val();
-		// var myExp = new RegExp(searchField, "i");
-			// // var output = '<ul class="searchresults">';
+		var searchField = $('#search').val();
+		var myExp = new RegExp(searchField, "i");
+		model.setSearchDish(myExp);
+		model.update();
+			// var output = '<ul class="searchresults">';
 			// $.each(allRecipes, function(key, val) {
 				// if (val.name.search(myExp) != -1){
 					// console.log(val);
-
-					// // output += '<li>';
-					// // output += '<h2>'+ val.name +'</h2>';
-					// // output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="'+ val.name +'" />';
-					// // output += '<p>'+ val.bio +'</p>';
-					// // output += '</li>';
+					// output += '<li>';
+					// output += '<h2>'+ val.name +'</h2>';
+					// output += '<img src="images/'+ val.shortname +'_tn.jpg" alt="'+ val.name +'" />';
+					// output += '<p>'+ val.bio +'</p>';
+					// output += '</li>';
 				// }
 			// });
-			// // output += '</ul>';
+			// output += '</ul>';
 		
-	// });
+	});
 
-
+});

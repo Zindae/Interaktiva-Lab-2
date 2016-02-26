@@ -1,10 +1,21 @@
 var SelectionView = function (container, model) {
 	this.updateDisplay = function() {
+		var allRecipes;
 		
 		$(".main1view1").html('');
 		
-		var allRecipes = model.getAll();
+		var myExp = model.getSearchDish();
+		var filter = model.getFilterType();
 
+		// Check filter
+		if (filter == 'all dishes'){
+			allRecipes = model.getAll();
+		}
+		
+		else {
+			allRecipes = model.getAllDishes(filter);
+		}
+		
       // Length of the array for the FOR loop
 		var len = allRecipes.length;
 		
@@ -13,10 +24,15 @@ var SelectionView = function (container, model) {
             
             // Gets specific recipe
             var outputDish = allRecipes[i];
+			
+			
+			if (outputDish.name.search(myExp) != -1) {
+				
             //Creates DIV with recipe info.
-			//console.log(outputDish.id);
-            $(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.id+'" ><img class="icon" src="./images/'+outputDish.image+'"><p>'+outputDish.name+'</p></div>');
-	 	 };
+
+				$(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.id+'" ><img class="icon" src="./images/'+outputDish.image+'"><p>'+outputDish.name+'</p></div>');
+			}
+		 };
 		 
 		
 		// Click function here to update the event handler when model.update() occurs.
@@ -31,5 +47,5 @@ var SelectionView = function (container, model) {
 			model.update();
 		});
 
-	};
+		};
 };

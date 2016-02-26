@@ -26,6 +26,32 @@ var DinnerModel = function() {
 	
 	var numberOfGuests = 1;	
 	
+	
+	//***** SEARCH FUNCTION VARIABLE******//
+	var searchDish;
+	this.setSearchDish = function(fn){
+		searchDish = fn;
+	}
+	
+	this.getSearchDish = function() {
+		return searchDish;
+	}
+	//***** SEARCH END ******//
+	
+	
+	//***** FILTER VARIABLES *****//
+	
+	var filterType = 'all dishes';
+	
+	this.setFilterType = function(filter) {
+		filterType = filter;	
+		console.log(filterType);
+	}
+	
+	this.getFilterType = function(){
+		return filterType;
+	}
+	
 	// Functions to store a variable for selection-view.
 	this.setDishID = function(id){
 		dishToDisplayInDishView = id;
@@ -71,7 +97,7 @@ var DinnerModel = function() {
 		}
 		return total;
 	}
-		
+	
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
