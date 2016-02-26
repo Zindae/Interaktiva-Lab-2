@@ -41,9 +41,9 @@ var SelectionView = function (container, model) {
 			
 			var dishID = $(this).attr('id');		
 			model.setDishID(dishID);			
-			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, .main1search').css('display', ''); 
 			$('.main1').show(); 
-			$('.start-page, .main1view1, .main2').hide();
+			$('.start-page, .main1view1, .main2, .main1search').hide();
 			model.update();
 		});
 

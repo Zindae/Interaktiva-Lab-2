@@ -23,8 +23,8 @@ $(document).ready(function(){
 		case 'back':
        	case 'confirm-dish':
         case 'go-back-to-edit':
-       		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-       		$('.main1').show(); 
+       		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, .main1search').css('display', ''); 
+       		$('.main1, .main1search').show(); 
        		$('.start-page, .main1view2, .main2').hide();
        		break; 
        		
@@ -39,7 +39,6 @@ $(document).ready(function(){
        	case 'button4':
 		case 'confirm-dinner':
         case 'go-back-to-overview':
-            // case 'go-back-to-edit':
 			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 			$('.main2').show(); 
        		$('.start-page, .main2view2, .main1').hide();
@@ -54,13 +53,4 @@ $(document).ready(function(){
        		break; 
 		}
 	});
-
-      // $('.main1view1dishes').click(function(){
-
-      //       $('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-      //       $('.main1').show(); 
-      //       $('.start-page, .main1view1, .main2').hide();
-
-      // });
-
 });

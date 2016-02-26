@@ -82,10 +82,14 @@ h1, h2, h3, h4, h5, h6 {
 	/*..here, auto makes the element float in the middle but stay locked vertically*/
 	margin: .7em auto 0;
 	width: 98%;
-	border-bottom: solid 1px black;
+	border-bottom: solid 2px black;
+	padding-bottom:15px;
 	/*opacity: .5;*/
 }
 
+.main2dishes {
+	margin-top:96px;
+}
 /* .main2dishes::after {
 	display: block;
 	content: ""; 
@@ -106,6 +110,7 @@ Header
 	height: 100px;
 	background-color: rgba(245, 222, 111, 0.5);
 	z-index: 1;
+	border-bottom: 5px solid black;
 	/*margin:0px auto;*/
 	/*background: transparent;*/
 	/* background-opacity: .5; */
@@ -117,8 +122,8 @@ Header
 Bootstrap Override
 ***************************************************/
 
-img { 
-   border:2px solid #021a40;
+img {
+	border: 2px solid black;
 }
 
 .main1, .main2 {
@@ -133,35 +138,55 @@ img {
 	background-color: rgba(245, 222, 111, 1);
 }
 .main2 {
-	background-color: #edd;
+	background-color: white;
 }
 .main1content {
 	background-color: #4dd;
 }
 .main1view1 {
+	position:fixed;
+	overflow-y:scroll;
+	margin-top:118px;
+	margin-right:0px;
+	height: 75vh;
 	background-color: white;
-	image-border: solid;
-
 }
 
-.main1view1dishes{
-	margin-left: auto;
-	margin-right: auto;
+.main1view1dishes {
+	margin:45px;
 	height: 180px;
-	border: 1px solid grey;
-    /* justify-content: space-around; */
+}
+
+.main1view1dishes img {
+	width: 100%;
+	
+}
+
+.main1view1dishes p {
+	background-color: lightgrey;
+	border-bottom: 2px solid black;
+	border-left: 2px solid black;
+	border-right: 2px solid black;
 }
 
 .main1view2 {
-	background-color: #C2E8E2;
+	position:fixed;
+	overflow-y: scroll;
+	height: 87vh;
+	margin-right:0px;
+	background-color: white;
 }
 
 .main2view2{
-	background-color: pink;
+	margin-top:80px;
 }
 
 .main1search {
+	z-index: 1;
+	width: 100%;
+	position:fixed;
 	background-color: rgba(245, 222, 111, 1);
+	border-bottom: 2px solid black;
 }
 .container {
 	width: 100%;
@@ -172,16 +197,16 @@ img {
 }
 .main2prepdish {
 	border-bottom: 2px solid black;
-	margin-top: 5px;
-	margin-bottom: 5px;
+	padding-top: 15px;
+	padding-bottom: 15px;
 }
 /***************************************************
 Sideview
 ***************************************************/
 .main1-sideview {
 	background-color: white;
-	padding-bottom: 100%;
-	border: solid black;
+	height: 87vh;
+	border-right: solid black;
 }
 .side-view-people-selection {
 	display: block;
@@ -222,16 +247,16 @@ Sideview
 main1view2
 ***************************************************/
 .main1view2dishname {
-	background-color: #34dae5;
+	background-color: white;
 }
 .main1view2ingredients {
-	background-color: #F5F5DC;
+	background-color: #FFE48A;
 	padding-bottom: 20px;
 	border: solid grey;
 
 }
 .main1view2preparation {
-	background-color: #ad22d3;
+	background-color: white;
 }
 
 .row-for-display-ingredients{
@@ -244,6 +269,9 @@ main1view2
 Search & Status-bar
 ***************************************************/
 .main2statusbanner {
+	position:fixed;
+	width:100%;
+	z-index:1;
 	background-color: rgba(245, 222, 111, 1);
 	border: 2px solid black;
 }
@@ -272,6 +300,10 @@ Buttons
 	
 }
 
+#search {
+	width:200px;
+}
+
 #go-back-to-edit, #go-back-to-overview {
 	display: inline;
 	float:right;
@@ -289,8 +321,8 @@ Buttons
 	
 #print-recipe {
 	position: relative;
-	
-    margin: 10 auto;
+	font-size: 16px;
+    margin: 15 auto;
 }
 .main2-go-back {
 	/*position: inline;*/
