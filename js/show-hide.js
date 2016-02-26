@@ -8,7 +8,7 @@ $(document).ready(function(){
              
 			 
 			 
-            switch(this.id) {
+        switch(this.id) {
        	
        	// start-page
        	case 'button1': 
@@ -19,10 +19,10 @@ $(document).ready(function(){
        	
        	// main1view1
        	case 'button2':
-            case 'create-dinner':
+        case 'create-dinner':
 		case 'back':
        	case 'confirm-dish':
-            case 'go-back-to-edit':
+        case 'go-back-to-edit':
        		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
        		$('.main1').show(); 
        		$('.start-page, .main1view2, .main2').hide();
@@ -38,7 +38,7 @@ $(document).ready(function(){
        	// main2view1
        	case 'button4':
 		case 'confirm-dinner':
-            case 'go-back-to-overview':
+        case 'go-back-to-overview':
             // case 'go-back-to-edit':
 			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
 			$('.main2').show(); 

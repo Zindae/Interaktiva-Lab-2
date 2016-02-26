@@ -1,15 +1,9 @@
 //DinnerModel Object constructor DATA
-// console.log("");
-
-
 var DinnerModel = function() {
- 
-
 	
 	// *************OBSERVER *************//
 	
 	this.subscribers = [];
-	//console.log(this.subscribers);
 	
 	this.subscribe = function (fn) {
 		this.subscribers.push(fn);
@@ -27,70 +21,48 @@ var DinnerModel = function() {
 		}
 	};
 
-
-
-
-
+	// dishToDisplay is a simple variable to store for usage in selection-view.
 	var dishToDisplayInDishView;
+	
 	var numberOfGuests;	
 	
+	// Functions to store a variable for selection-view.
 	this.setDishID = function(id){
-		console.log(dishToDisplayInDishView);
 		dishToDisplayInDishView = id;
-		console.log(dishToDisplayInDishView);
 	};
 	
 	this.getDishID = function() {
 		return dishToDisplayInDishView;
 	};
 	
+	
+	// Global menu for choice of food.
 	this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
 
+	// Number of guests variable in sideview.
 	this.setNumberOfGuests = function(num) {
-		// Väljer hur många människor som kommer (knapp Up-down / sideview)
 		numberOfGuests = num;
 	}
 
+	
 	this.getNumberOfGuests = function() {
-		// Visa hur många som kommer i sideview OCH på overviewen / summary.
 		return numberOfGuests;
 	}
 
-	// //Returns the total price of the menu (all the ingredients multiplied by number of guests).
-	// this.getTotalMenuPrice = function(menu) {
-		// var len = menu.length;
-		// var ID = 1;
-		// for(i = 0; i < len; i++){
-			// var id = menu[i];
-			// var getDish(ID).ingredients;
-			
-			// for(j = 0, j < len; j++){
-			
-			// }
-			// var ingredients = getDish(i).ingredients[i];
-			
-		// }
-	// }
 
+	// Adds together all ingredients cost => price cost for one dish.
 	this.getDishPrice = function(val) {
-		
 		var priceArray = 0;
-
-	
-		var dish = this.getDish(val);
-		// console.log(dish);
-			
+		var dish = this.getDish(val);	
 		var array2 = dish.ingredients;
 		for (i in array2){
 			var ing = array2[i].price;
-			// console.log(ing);
 			priceArray += ing;
-			
-			
 		}
 		return priceArray;
 	};
-		
+
+	// Adds together all chosen dishes cost.
 	this.getTotalMenuPrice = function() {
 		var total = 0; 
 		for (i in this.menu) {
@@ -98,68 +70,7 @@ var DinnerModel = function() {
 		}
 		return total;
 	}
-	
-	
-	
-		// for(i = 0; i < len; i++){
-			
-			// var id = confirmedDish[i];
-			// var getDish(ID).ingredients(i);
-			
-			// for(j = 0, j < len; j++){
-			
-			// }
-			// var ingredients = getDish(i).ingredients[i];
-	
-	//Adds the passed dish to the menu. If the dish of that type already exists on the menu
-	//it is removed from the menu and the new one added.
-	
-	this.addDishToMenu = function(id) {
-		confirmedDish.push(id);
-		return confirmedDish;
-	}
-
-	//Removes dish from menu
-	this.removeDishFromMenu = function(id) {
-		confirmedDish.pop();
-		return confirmedDish;
-	}
-
-	
-	//Returns all ingredients for all the dishes on the menu.
-	this.getAllIngredients = function() {
-		var i, 
-			j, 
-			dish,
-			ingredients;
-
-		for (i in dishes) {
-
-			dish = dishes[i];
-			
-			for (j in dish.ingredients) {
-				ingredients = dish.ingredients[j]
-
-				// $.each(ingredients, function(key, val) {
-				// 	console.log(key + ": " + val);
-				// });
-			}
-		}	
-	}
-
-	// //Returns all ingredients for all the dishes on the menu.
-	// this.getAllIngredients = function() {
-	// 	for (i in dishes) {
-	// 		for (j in dishes.ingredients) {
-			
-	// 			return j;	
-	// 		}
-	// 	}
-	// };
-
-
-
-	
+		
 	//function that returns all dishes of specific type (i.e. "starter", "main dish" or "dessert")
 	//you can use the filter argument to filter out the dish by name or ingredient (use for search)
 	//if you don't pass any filter all the dishes will be returned
