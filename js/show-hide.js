@@ -39,16 +39,16 @@ $(document).ready(function(){
        	case 'button4':
 		case 'confirm-dinner':
         case 'go-back-to-overview':
-			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, #go-back-to-overview').css('display', ''); 
 			$('.main2').show(); 
-       		$('.start-page, .main2view2, .main1').hide();
+       		$('.start-page, .main2view2, .main1, #go-back-to-overview').hide();
        		break; 
 
        	// main2view2
        	case 'button5':
 		case 'print-recipe':
-			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
-			$('.main2').show(); 
+			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, #go-back-to-overview').css('display', ''); 
+			$('.main2, #go-back-to-overview').show(); 
        		$('.start-page, .main2view1, .main1').hide();
        		break; 
 		}
