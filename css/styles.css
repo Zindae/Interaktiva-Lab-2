@@ -71,6 +71,10 @@ h1, h2, h3, h4, h5, h6 {
     /* opacity: .5; */
 }
 
+.tot {
+	position:absolute;
+	bottom: 1px;
+}
 
 .start-page h2, .main2dishes, #main1view2ingrheader::after {
 	display: block;
@@ -126,7 +130,7 @@ img {
 }
 
 .main1 {
-	background-color: #afa;
+	background-color: rgba(245, 222, 111, 1);
 }
 .main2 {
 	background-color: #edd;
@@ -135,7 +139,7 @@ img {
 	background-color: #4dd;
 }
 .main1view1 {
-	background-color: #C895E8;
+	background-color: white;
 	image-border: solid;
 
 }
@@ -145,8 +149,9 @@ img {
 	margin-right: auto;
 	height: 180px;
 	border: 1px solid grey;
-    justify-content: space-around;
+    /* justify-content: space-around; */
 }
+
 .main1view2 {
 	background-color: #C2E8E2;
 }
@@ -163,10 +168,13 @@ img {
 	margin: 100px 0px 0px 0px;
 }
 .main2printrecipe {
-	/*height: 100%;*/
-	/*margin-bottom: 0px;*/
+	text-align:center;
 }
-
+.main2prepdish {
+	border-bottom: 2px solid black;
+	margin-top: 5px;
+	margin-bottom: 5px;
+}
 /***************************************************
 Sideview
 ***************************************************/
@@ -220,17 +228,24 @@ main1view2
 	background-color: #F5F5DC;
 	padding-bottom: 20px;
 	border: solid grey;
+
 }
 .main1view2preparation {
 	background-color: #ad22d3;
 }
+
+.row-for-display-ingredients{
+	margin-bottom: 40px;
+}
+
 
 
 /***************************************************
 Search & Status-bar
 ***************************************************/
 .main2statusbanner {
-	background-color: #6AADB5;
+	background-color: rgba(245, 222, 111, 1);
+	border: 2px solid black;
 }
 
 .dishname {
@@ -251,12 +266,19 @@ Buttons
 	margin-bottom: 10px;
 }
 
+.right{
+	border-left: 2px solid black;
+	height:204px;
+	
+}
 
-	/* Form */
-
-/* .form-control{
-	margin-top: 50px;
-}	 */
+#go-back-to-edit, #go-back-to-overview {
+	display: inline;
+	float:right;
+	margin-top: 15px;
+	margin-left: 5px;
+	margin-bottom: 5px;
+}
 
 .input-people {
 	margin-top: 5px;
@@ -265,15 +287,10 @@ Buttons
 	width: 50px;
 }
 	
-.print-recipe {
-	/*position: relative;
-
-	text-align: center;
-	*/
-	display: block;
-    margin: 0 auto;
-    /*text-align: center;*/
-    margin-bottom: 100%;
+#print-recipe {
+	position: relative;
+	
+    margin: 10 auto;
 }
 .main2-go-back {
 	/*position: inline;*/
@@ -282,11 +299,16 @@ Buttons
 	display: inline-block;
     vertical-align: middle;
 }
-#back, #confirm-dish {
-	position: absolute;
-	left:    25;
-	bottom:   -40;
 
+.dishbuttons{
+	margin-bottom:10px;
+}
+#confirm-dish {
+	float:right;
+}
+
+#back {
+	float:left;
 }
 
 /***************************************************

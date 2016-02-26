@@ -24,7 +24,7 @@ var DinnerModel = function() {
 	// dishToDisplay is a simple variable to store for usage in selection-view.
 	var dishToDisplayInDishView;
 	
-	var numberOfGuests;	
+	var numberOfGuests = 1;	
 	
 	// Functions to store a variable for selection-view.
 	this.setDishID = function(id){
@@ -37,7 +37,7 @@ var DinnerModel = function() {
 	
 	
 	// Global menu for choice of food.
-	this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
+	this.menu = {'starter':1, 'main dish':100, 'dessert':200};
 
 	// Number of guests variable in sideview.
 	this.setNumberOfGuests = function(num) {
@@ -52,6 +52,7 @@ var DinnerModel = function() {
 
 	// Adds together all ingredients cost => price cost for one dish.
 	this.getDishPrice = function(val) {
+		
 		var priceArray = 0;
 		var dish = this.getDish(val);	
 		var array2 = dish.ingredients;

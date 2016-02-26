@@ -2,7 +2,9 @@ var SearchView = function (container) {
       // maybe search view is a static view and shouldn't be instantiated as a View
 };
 
-
+	//http://jsfiddle.net/umaar/t82gZ/
+	
+	
       // 1. START-PAGE
       //          => CREATE_MENU
       

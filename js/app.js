@@ -30,6 +30,7 @@ $(document).ready(function(){
 	// set number of people
 	$('#number-of-people').change(function() {
 		model.setNumberOfGuests(this.value);
+		model.update();
 	});
 
 

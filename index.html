@@ -46,7 +46,6 @@
 
 		<!-- ***************************************************************** -->
 		<div class="main1 container">
-			<p>Inside main1</p> 
 			<div class="row">
 				
 				<div class="main1-sideview col-xs-2">
@@ -71,7 +70,7 @@
 				<div class="main1content col-xs-10">			
 					<div class="row main1search">
 						<div class="col-xs-3 search">
-						<br>
+							<br>
 							<input name="search" type="text" class="form-control" id="search" placeholder="Search courses">
 							<br>
 							<input name="search-btn" id="searchCourse" type="submit" class="btn" value="Search"/>
@@ -83,6 +82,7 @@
 							http://www.abeautifulsite.net/smoothly-scroll-to-an-element-without-a-jquery-plugin-2/ -->
 						</div>
 						<div class="col-xs-3 form">
+						<br>
 							<select class="form-control">
 							  <option>Start</option>
 							  <option>Main Dish</option>
@@ -106,15 +106,18 @@
 								<div>
 									<!-- col1 data goes here -->
 								</div>								
-								<button id="back">Back to Dishes</button>
+								
 							</div>
 							
 							<div class="col-xs-6 main1view2ingredients">
-								<h3 id="main1view2ingrheader">INGREDIENTS FOR <span id"number-of-people-in-main1view2"></span> PEOPLE</h3>
+								<h3 id="main1view2ingrheader">INGREDIENTS FOR <span class="number-of-people-in-main1view2"></span> PEOPLE</h3>
 								<div class="row row-for-display-ingredients">
 								 	<!-- col2 data goes here -->
 								</div>
+								<div class="dishbuttons">
 								<button id="confirm-dish">Confirm Dish</button>
+								<button id="back">Back to Dishes</button>
+								</div>
 							</div>
 							
 							<div class="clearfix visible-lg visible-md visible-sm visible-xs"></div>
@@ -133,21 +136,22 @@
 		<!-- <hr> -->
 		<!-- ***************************************************************** -->
 		<div class="main2 container">
-			<p>Inside main2</p>
 			<div class="row main2statusbanner">
-				<div class="col-xs-12">
-					<h3>My Dinner: <span class="main2-number-of-ppl"></span></h3>
-					<p>this is the top display bar in view 3 and4</p>
+				<div class="col-xs-8">
+					<h3>My Dinner: <span class="main2-number-of-ppl"></span> people</h3>
+				</div>
+				<div class="col-xs-4">
 					<button id="go-back-to-edit">Go back and edit dinner</button>
 					<button id="go-back-to-overview">Go back to overview</button>
 				</div>
+				
 			</div> <!-- main2statusbanner -->
 
 			<div class="row main2view1">
 				<div class="row main2dishes">
-					<div class="left"></div>
+					<div class="col-xs-3 left"></div>
 					<div class="middle"></div>
-					<div class="right"></div>
+					<div class="col-xs-3 right"></div>
 					
 
 				</div>	<!-- main2dishes -->
