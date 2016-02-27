@@ -12,12 +12,16 @@ var DinnerModel = function() {
 		//console.log('0 subscriber:', this.subscribers[0]);
 	};
 
-	this.update = function () {
+	this.update = function (data) {
 		var i, 
 			max = this.subscribers.length;
 
 		for (i = 0; i < max; i += 1) {
 			this.subscribers[i]();
+			
+		}
+		if (data !== undefined){
+			return data;
 		}
 	};
 
@@ -55,15 +59,17 @@ var DinnerModel = function() {
 	// Functions to store a variable for selection-view.
 	this.setDishID = function(id){
 		dishToDisplayInDishView = id;
+		console.log('setdishid:', dishToDisplayInDishView);
 	};
 	
 	this.getDishID = function() {
 		return dishToDisplayInDishView;
+		console.log('getdishid:', dishToDisplayInDishView);
 	};
 	
 	
 	// Global menu for choice of food.
-	this.menu = {'starter':1, 'main dish':100, 'dessert':200};
+	this.menu = {'starter':undefined, 'main dish':undefined, 'dessert':undefined};
 
 	// Number of guests variable in sideview.
 	this.setNumberOfGuests = function(num) {
@@ -79,14 +85,15 @@ var DinnerModel = function() {
 	// Adds together all ingredients cost => price cost for one dish.
 	this.getDishPrice = function(val) {
 		
-		var priceArray = 0;
-		var dish = this.getDish(val);	
-		var array2 = dish.ingredients;
-		for (i in array2){
-			var ing = array2[i].price;
-			priceArray += ing;
-		}
-		return priceArray;
+		// var priceArray = 0;
+		// var dish = this.getDish(val);	
+		// console.log('dish:', dish);
+		// var array2 = dish.ingredients;
+		// for (i in array2){
+			// var ing = array2[i].price;
+			// priceArray += ing;
+		// }
+		return val;
 	};
 
 	// Adds together all chosen dishes cost.
@@ -122,20 +129,103 @@ var DinnerModel = function() {
 
 
 	// Returns dish object of specific ID
-	this.getDish = function (id) {
-	  for(key in dishes){
-			if(dishes[key].id == id) {
-				return dishes[key];  // WORKS
-			}
-		}
-	}
+	// this.getDish = function (id) {
+		// var msg = this.getAll();
+		// for(key in msg){
+			// if(msg[key].RecipeID == id) {
+				// return msg[key];  // WORKS
+			// }
+		// }
+	// }
 	
 	// Returns array with recipe objects
-	this.getAll = function () {
-		for(i in dishes)
-			return dishes;  // WORKS
+	// this.getAll = function () {
+		// for(i in dishes)
+			// return dishes;  // WORKS
+	// }
+	
+	//*******TEST BIGOVEN********//
+	
+	this.msg;
+	
+	this.setR = function (fn) {
+		msg = fn;
 	}
 	
+	this.getAll = function () {
+		return msg["responseJSON"]["Results"];
+	}
+	
+	this.getRecipeJson = function () {
+		var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+		var recipeID = 196149;
+		var url = "http://api.bigoven.com/recipes/?api_key="+apiKey+"&pg=1&rpp=25";
+		var request = $.ajax({
+			async: false,
+			type: "GET",
+			dataType: 'json',
+			cache: true,
+			url: url,
+			success: function (data) {
+            alert('success');
+			console.log(data);
+			return data;
+            }
+         });
+		this.setR(request);
+		
+
+	this.grocery;
+	
+	this.setGrocery = function (fn) {
+		grocery = fn;
+		console.log('set!', grocery);
+	}
+	
+	this.getGrocery = function () {
+		console.log('ingredienserna:', grocery["responseJSON"]["Ingredients"]);
+		return grocery["responseJSON"]["Ingredients"];
+	}
+	
+	this.getDish = function (id) {
+		var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+		var url = "http://api.bigoven.com/recipe/"+id+"?api_key="+apiKey;
+		console.log('url', url);
+		var request = $.ajax({
+			async: false,
+			type: "GET",
+			dataType: 'json',
+			cache: true,
+			url: url,
+			success: function (data) {
+            alert('successGroceryList');
+			//console.log(data);
+			return data;
+            }
+         });
+		this.setGrocery(request);
+	}
+	
+	//******** BIGOVEN END *********//
+	
+	
+		// request.done(function( msg ) {
+			// this.setR(msg);
+		// });
+		 
+		// request.fail(function( jqXHR, textStatus ) {
+			// console.log(textStatus);
+		// });		
+	}
+       
+	   
+	// this.waitForElement = function (x){
+		// while( typeof x === "undefined"){
+			// console.log("ok!");
+			// console.log(x);
+		// }
+
+	// }
 	
 	// the dishes variable contains an array of all the 
 	// dishes in the database. each dish has id, name, type,

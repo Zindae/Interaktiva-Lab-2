@@ -1,6 +1,5 @@
 $(document).ready(function(){        
-		
-		
+	
 	// MODEL
 	var model = new DinnerModel();
 	
@@ -28,4 +27,6 @@ $(document).ready(function(){
 		// model.update();
 	// });
 	
+	
+	//p.addEventListener("click", theFunction, true);
 });
