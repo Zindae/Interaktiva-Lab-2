@@ -23,11 +23,8 @@ var DishView = function (container, model, x) {
 				
 			else {				
 				var oneRecipe = model.singleRecipe[0];
-				//console.log(oneRecipe);
 				var ingr = oneRecipe["Ingredients"];
-				//console.log('ingredients:', ingr)
 				var len = ingr.length;
-				//console.log(len);
 				var ingredientsVar = model.getNumberOfGuests();
 				var id = model.getDishID();
 				
@@ -48,7 +45,7 @@ var DishView = function (container, model, x) {
 				});
 				
 				// COL 3
-				$(".main1view2preparation").html('<h3>Preparation</h3><h5>' + oneRecipe.Instructions + '</h5>');
+				$(".main1view2preparation").html('<h3>Preparation</h3><h5>' + oneRecipe.Instructions + '</h5></div>');
 			}
       };
 };

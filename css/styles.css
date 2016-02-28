@@ -143,23 +143,38 @@ img {
 .main1content {
 	background-color: #4dd;
 }
+
 .main1view1 {
+    text-align: center;
+    width: 83.5%;
 	position:fixed;
 	overflow-y:scroll;
-	margin-top:118px;
+	margin-top:115px;
 	margin-right:0px;
 	height: 75vh;
 	background-color: white;
 }
 
 .main1view1dishes {
-	margin:45px;
+	margin-top:70px;
+	margin-bottom:70px;
+	margin-left:40px;
+	margin-right:40px;
 	height: 180px;
 }
 
 .main1view1dishes img {
 	width: 100%;
 	
+}
+
+.loading{
+	/* float:right; */
+}
+
+.overviewRecipe img{
+	height: 100px;
+	width: 100px;
 }
 
 .main1view1dishes p {
@@ -179,6 +194,10 @@ img {
 
 .main2view2{
 	margin-top:80px;
+}
+
+.main2view2 img{
+	width: 200px;
 }
 
 .main1search {

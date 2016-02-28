@@ -1,5 +1,22 @@
 var Controller = function(model){
+	
+	$( ".loading" ).hide();
+	
+	$( document ).ajaxStart(function() {
+		$('.loading').css('display', ''); 
+		$( ".loading" ).show();
+	});
+	
+	$( document ).ajaxStop(function() {
+		$('.loading').css('display', ''); 
+		$( ".loading" ).hide();
+	});
 
+	$('.submit').click (function() {
+		// $('.form-control').submit()
+		console.log('hej');
+	});
+	
 	// start app
 	$('#create-dinner').click(function(){
 		$('#body').css('background-color','white');

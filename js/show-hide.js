@@ -14,9 +14,9 @@ $(document).ready(function(){
        	
        	// start-page
        	case 'button1': 
-       		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2').css('display', ''); 
+       		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, .loading').css('display', ''); 
        		$('.start-page').show(); 
-       		$('.main1, .main2').hide();
+       		$('.main1, .main2, .loading').hide();
        		break; 
        	
        	// main1view1

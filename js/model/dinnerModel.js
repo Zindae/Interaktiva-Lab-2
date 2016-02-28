@@ -27,7 +27,7 @@ var DinnerModel = function() {
 	//******** BIGOVEN ********//
 	
 	this.singleRecipe = [];
-	console.log(this.singleRecipe);
+	//console.log(this.singleRecipe);
 	
 	//console.log('singleRecipe,before', singleRecipe);
 	
@@ -40,27 +40,19 @@ var DinnerModel = function() {
 			async: false,
 			type: "GET",
 			dataType: 'json',
-			cache: false,
+			cache: true,
 			url: url,
 			success: function (data) {
 				that.singleRecipe.push(data);
-				console.log('data', data);
+				//console.log('data', data);
 				that.update(data);
-				// console.log('dnrmdl', that.singleRecipe);
 			}
 		});
 	}
 	
-	// this.getRecipeIDList = function () {
-		// return recipeIDList;
-	// }
 
 	this.storeSearch = [];
-	console.log('1', this.storeSearch);
-	
-	var recipeIDList = [];
-	console.log('2', this.recipeIDList);
-
+	//console.log('1', this.storeSearch);
 
 	this.getRecipe = function(kw) {
         var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
@@ -70,10 +62,10 @@ var DinnerModel = function() {
 		var that = this;
 		this.storeSearch = [];
         $.ajax({
-			async: false,
+			async: true,
             type: "GET",
             dataType: 'json',
-            cache: false,
+            cache: true,
             url: url,
             success: function (data) {
 				correct = data["Results"];
@@ -85,31 +77,24 @@ var DinnerModel = function() {
 	
 
 
-	this.searchRecipe = function (kw) {
-		var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
-		var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&api_key="+apiKey;
-		var element = this;
-		$.ajax({
-			async: false,
-			type: "GET",
-			dataType: 'json',
-			cache: false,
-			url: url,
-			success: function (data) {
-				//console.log(data);
+	// this.searchRecipe = function (kw) {
+		// var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+		// var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&api_key="+apiKey;
+		// var element = this;
+		// $.ajax({
+			// async: true,
+			// type: "GET",
+			// dataType: 'json',
+			// cache: false,
+			// url: url,
+			// success: function (data) {
+				// console.log(data);
 				// correct = data["Results"];
-				storeSearch.push(correct);
+				// storeSearch.push(correct);
 				// console.log('2', correct);
-				
-				
-			// },
-			// complete: function (data) {
-				// this.update(); 
-			}
-		
-		});
-	
-	}
+			// }
+		// });
+	// }
 	
 	//******** END ********//
 	
