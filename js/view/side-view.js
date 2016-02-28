@@ -6,14 +6,14 @@ var SideView = function (container, model) {
 		
 		var price = 0;
 		var guests = model.getNumberOfGuests();
-		console.log(guests);
-		for (var key in model.menu) {
-			if (model.menu[key] !== undefined) {
-				id = model.menu[key];
-				price = price + model.getDishPrice(id);
-				this.dishDiv.append('<div class="col-xs-8 dishname">' +model.getDish(id).name +'</div><div class="col-xs-4 dishcost">' + model.getDishPrice(id) + '</div>');
-				$(".sideview-display-total-cost").html(guests*price+' SEK');
-			}
+		//console.log(guests);
+		for (i in model.menu) {
+			id = model.menu;
+			//price = price + model.getDishPrice(id);
+			this.dishDiv.append('<div class="col-xs-8 dishname">' +model.menu[i].Title+'</div><div class="col-xs-4 dishcost"></div>');
+			$(".sideview-display-total-cost").html(guests*price+' SEK');
 		}
 	};
 };
+
+// + model.getDishPrice(id) + 

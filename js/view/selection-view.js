@@ -1,51 +1,58 @@
-var SelectionView = function (container, model) {
+var SelectionView = function (container, model, x) {
 	this.updateDisplay = function() {
 		var allRecipes;
-		
+		//$('.loading').hide();
 		$(".main1view1").html('');
-		
-		var myExp = model.getSearchDish();
-		var filter = model.getFilterType();
 
-		// Check filter
-		if (filter == 'all dishes'){
-			allRecipes = model.getAll();
-		}
+		// On ENTER
+		$('.form-control').keydown(function(event) {	
 		
-		else {
-			allRecipes = model.getAllDishes(filter);
-		}
+			if (event.keyCode == 13) {
+				var searchField = $('#search').val();
+				var myExp = new RegExp(searchField, "i");
+				model.setSearchDish(myExp);
+				model.getRecipe(searchField);
+				//$('.loading').show();
+				model.update();
+			}
+		});	
 		
       // Length of the array for the FOR loop
-		var len = allRecipes.length;
-		
-      // Iterates through every recipe in dinnerModel.js
-		for (i = 0; i < len; i++) {
-            
-            // Gets specific recipe
-            var outputDish = allRecipes[i];
-			
-			
-			if (outputDish.name.search(myExp) != -1) {
-				
-            //Creates DIV with recipe info.
+		allRecipes = model.storeSearch;
+		temp = allRecipes[0];
+		//console.log('SELECT');
 
-				$(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.id+'" ><img class="icon" src="./images/'+outputDish.image+'"><p>'+outputDish.name+'</p></div>');
-			}
-		 };
-		 
+
+				
+		if (temp === undefined) {
+			return;
+		}
+		else {
+			// console.log('temp', temp);
+			var len = temp.length;
+			// console.log(len);
+			$(".main1view1").html('');
+		  // Iterates through every recipe in dinnerModel.js
+			for (i = 0; i < len; i++) {
+				
+				// Gets specific recipe
+				var outputDish = temp[i];
+				
+				//if (outputDish.name.search(myExp) != -1) {
+					
+				//Creates DIV with recipe info.
+
+					$(".main1view1").append('<div class="col-xs-2 main1view1dishes" id="'+outputDish.RecipeID+'" ><img class="icon" src="'+outputDish.ImageURL120+'"><p>'+outputDish.Title+'</p></div>');
+			 };
+			
+
+			} 
 		
 		// Click function here to update the event handler when model.update() occurs.
-		
-		$('.main1view1dishes').click(function(){
-			
-			var dishID = $(this).attr('id');		
-			model.setDishID(dishID);			
-			$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, .main1search').css('display', ''); 
-			$('.main1').show(); 
-			$('.start-page, .main1view1, .main2, .main1search').hide();
-			model.update();
-		});
 
-		};
+
+
+
+
+	};
 };

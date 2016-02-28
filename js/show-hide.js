@@ -3,8 +3,10 @@ $(document).ready(function(){
 		// ==> SHOW & hide used to display each 'page'
 		// short css 'display' reset before each hide/show in order to prevent
 		// conflicts since hide/show is abstracted under jquery.
-        
-      $('#create-dinner, #confirm-dinner, #go-back-to-edit, #back, #confirm-dish, #print-recipe, #button1, #button2, #button3, #button4, #button5, #go-back-to-overview').click(function() {        
+
+
+
+    $('#create-dinner, #confirm-dinner, #go-back-to-edit, #back, #confirm-dish, #print-recipe, #button1, #button2, #button3, #button4, #button5, #go-back-to-overview').click(function() {        
              
 			 
 			 

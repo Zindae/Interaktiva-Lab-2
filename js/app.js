@@ -1,6 +1,6 @@
 $(document).ready(function(){        
 		
-		
+	
 	// MODEL
 	var model = new DinnerModel();
 	

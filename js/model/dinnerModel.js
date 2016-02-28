@@ -12,15 +12,108 @@ var DinnerModel = function() {
 		//console.log('0 subscriber:', this.subscribers[0]);
 	};
 
-	this.update = function () {
+	this.update = function (x) {
 		var i, 
 			max = this.subscribers.length;
 
 		for (i = 0; i < max; i += 1) {
-			this.subscribers[i]();
+			//console.log('x update', x);
+			this.subscribers[i](x);
 		}
+		// console.log('subs', this.subscribers);
 	};
 
+	
+	//******** BIGOVEN ********//
+	
+	this.singleRecipe = [];
+	console.log(this.singleRecipe);
+	
+	//console.log('singleRecipe,before', singleRecipe);
+	
+	this.fetchRecipe = function (id) {
+		var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+		var url = "http://api.bigoven.com/recipe/" + id + "?api_key="+apiKey;
+		var that = this;
+		this.singleRecipe = [];
+		$.ajax({
+			async: false,
+			type: "GET",
+			dataType: 'json',
+			cache: false,
+			url: url,
+			success: function (data) {
+				that.singleRecipe.push(data);
+				console.log('data', data);
+				that.update(data);
+				// console.log('dnrmdl', that.singleRecipe);
+			}
+		});
+	}
+	
+	// this.getRecipeIDList = function () {
+		// return recipeIDList;
+	// }
+
+	this.storeSearch = [];
+	console.log('1', this.storeSearch);
+	
+	var recipeIDList = [];
+	console.log('2', this.recipeIDList);
+
+
+	this.getRecipe = function(kw) {
+        var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+        var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
+                  + kw
+                  + "&api_key="+apiKey;
+		var that = this;
+		this.storeSearch = [];
+        $.ajax({
+			async: false,
+            type: "GET",
+            dataType: 'json',
+            cache: false,
+            url: url,
+            success: function (data) {
+				correct = data["Results"];
+				that.storeSearch.push(correct);
+				that.update(correct);
+				}
+			});
+	}
+	
+
+
+	this.searchRecipe = function (kw) {
+		var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+		var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&api_key="+apiKey;
+		var element = this;
+		$.ajax({
+			async: false,
+			type: "GET",
+			dataType: 'json',
+			cache: false,
+			url: url,
+			success: function (data) {
+				//console.log(data);
+				// correct = data["Results"];
+				storeSearch.push(correct);
+				// console.log('2', correct);
+				
+				
+			// },
+			// complete: function (data) {
+				// this.update(); 
+			}
+		
+		});
+	
+	}
+	
+	//******** END ********//
+	
+	
 	// dishToDisplay is a simple variable to store for usage in selection-view.
 	var dishToDisplayInDishView;
 	
@@ -29,11 +122,13 @@ var DinnerModel = function() {
 	
 	//***** SEARCH FUNCTION VARIABLE******//
 	var searchDish;
+	
 	this.setSearchDish = function(fn){
 		searchDish = fn;
 	}
 	
 	this.getSearchDish = function() {
+		//console.log(searchDish);
 		return searchDish;
 	}
 	//***** SEARCH END ******//
@@ -63,7 +158,7 @@ var DinnerModel = function() {
 	
 	
 	// Global menu for choice of food.
-	this.menu = {'starter':1, 'main dish':100, 'dessert':200};
+	this.menu = [];
 
 	// Number of guests variable in sideview.
 	this.setNumberOfGuests = function(num) {
@@ -79,13 +174,13 @@ var DinnerModel = function() {
 	// Adds together all ingredients cost => price cost for one dish.
 	this.getDishPrice = function(val) {
 		
-		var priceArray = 0;
-		var dish = this.getDish(val);	
-		var array2 = dish.ingredients;
-		for (i in array2){
-			var ing = array2[i].price;
-			priceArray += ing;
-		}
+		var priceArray = 1;
+		// var dish = this.singleRecipe[0];;	
+		// var array2 = dish.Ingredients;
+		// for (i in array2){
+			// var ing = array2[i].price;
+			// priceArray += ing;
+		// }
 		return priceArray;
 	};
 
