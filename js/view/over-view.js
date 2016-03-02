@@ -1,10 +1,16 @@
 var OverView = function (container, model) {
       this.updateDisplay = function() {		
 			var guests = model.getNumberOfGuests();
+			var totalDinnerPrice = 0;
             // var starter = model.getDish(model.menu['starter']);
             // var main = model.getDish(model.menu['main dish']);
             // var dessert = model.getDish(model.menu['dessert']);
-			
+
+			for (i in model.menu) {
+				dish = model.menu[i];
+				totalDinnerPrice += model.getDishPrice(dish, guests);
+			}
+
 			// var starterPrice = guests*model.getDishPrice(model.menu['starter']);
 			// var mainPrice = guests*model.getDishPrice(model.menu['main dish']);
 			// var dessertPrice = guests*model.getDishPrice(model.menu['dessert']);
@@ -14,6 +20,7 @@ var OverView = function (container, model) {
 			this.dishDiv.html('');
 			for (i in model.menu) {
 				id = model.menu[i];
+				// console.log("blabla",id);
 				//price = price + model.getDishPrice(id);
 				this.dishDiv.append('<div class="overviewRecipe col-xs-2 "><img class="icon" src="'+ id.ImageURL + '"><br><br>'+ id.Title+'<br></div>');
 			}
@@ -27,7 +34,7 @@ var OverView = function (container, model) {
             
             var total = model.getTotalMenuPrice(model.menu)
 			$(".right").html('');
-            $(".right").append('<p class="tot">Totalt pris för meny med '+guests+' gäst(er) blir = ' +guests*total+ 'SEK</p>'); 
+            $(".right").append('<p class="tot">Totalt pris för meny med '+guests+' gäst(er) blir = ' +totalDinnerPrice+ 'SEK</p>'); 
 			
 			// confirm dinner to update event handler.
 				

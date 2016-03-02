@@ -33,8 +33,9 @@ var DinnerModel = function() {
 	
 	this.fetchRecipe = function (id) {
 		var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+		// var apiKey = "8vtk7KykflO5IzB96kb0mpot0sU40096";
 		var url = "http://api.bigoven.com/recipe/" + id + "?api_key="+apiKey;
-		var that = this;
+		var that = this; // that is meant to reference 'this' within [$.ajax]-scope
 		this.singleRecipe = [];
 		$.ajax({
 			async: false,
@@ -56,10 +57,11 @@ var DinnerModel = function() {
 
 	this.getRecipe = function(kw) {
         var apiKey = "18f3cT02U9f6yRl3OKDpP8NA537kxYKu";
+        // var apiKey = "8vtk7KykflO5IzB96kb0mpot0sU40096";
         var url = "http://api.bigoven.com/recipes?pg=1&rpp=25&title_kw="
                   + kw
                   + "&api_key="+apiKey;
-		var that = this;
+		var that = this; // that is meant to reference 'this' within [$.ajax]-scope
 		this.storeSearch = [];
         $.ajax({
 			async: true,
@@ -157,16 +159,14 @@ var DinnerModel = function() {
 
 
 	// Adds together all ingredients cost => price cost for one dish.
-	this.getDishPrice = function(val) {
+	this.getDishPrice = function(dish,guests) {
 		
-		var priceArray = 1;
-		// var dish = this.singleRecipe[0];;	
-		// var array2 = dish.Ingredients;
-		// for (i in array2){
-			// var ing = array2[i].price;
-			// priceArray += ing;
-		// }
-		return priceArray;
+		// var price = 1;
+		var len = dish['Ingredients'].length;
+
+
+		// return price;
+		return len * guests;
 	};
 
 	// Adds together all chosen dishes cost.

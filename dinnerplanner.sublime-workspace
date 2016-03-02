@@ -1,0 +1,1414 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"total",
+				"totalDinnerPrice"
+			],
+			[
+				"tot",
+				"totalDinnerPrice"
+			],
+			[
+				"get",
+				"getDishPrice"
+			],
+			[
+				"dish",
+				"dishByIndex"
+			],
+			[
+				"num",
+				"numberOfGuests"
+			],
+			[
+				"In",
+				"Ingredients"
+			],
+			[
+				"set",
+				"setDishID"
+			],
+			[
+				"di",
+				"dishDiv"
+			],
+			[
+				"con",
+				"container"
+			],
+			[
+				"m",
+				"menu"
+			],
+			[
+				"on",
+				"oneDish"
+			],
+			[
+				"up",
+				"updateDisplay"
+			],
+			[
+				"co",
+				"container"
+			],
+			[
+				"all",
+				"allRecipes"
+			],
+			[
+				"Prep",
+				"PrepView"
+			],
+			[
+				"getd",
+				"getDish"
+			],
+			[
+				"c",
+				"console"
+			],
+			[
+				"in",
+				"ingredients"
+			],
+			[
+				"Tet",
+				"TestModel"
+			],
+			[
+				"al",
+				"allDishes"
+			],
+			[
+				"de",
+				"dessert"
+			],
+			[
+				"pu",
+				"publisher"
+			],
+			[
+				"cre",
+				"create-dinner"
+			],
+			[
+				"sear",
+				"searchField"
+			],
+			[
+				"l",
+				"log"
+			],
+			[
+				"out",
+				"outputDish"
+			],
+			[
+				"ou",
+				"outputDish"
+			],
+			[
+				"ma",
+				"main1view1dishes"
+			],
+			[
+				"main1",
+				"main1view1"
+			],
+			[
+				"le",
+				"len"
+			],
+			[
+				"mar",
+				"margin-bottom"
+			],
+			[
+				"a",
+				"align-content"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"main",
+				"main1view1"
+			],
+			[
+				"back",
+				"background-color"
+			],
+			[
+				"padding",
+				"padding-bottom"
+			],
+			[
+				"padd",
+				"padding-bottom"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"marg",
+				"margin-bottom"
+			],
+			[
+				"text",
+				"text-align"
+			],
+			[
+				"h",
+				"h2	Tag"
+			],
+			[
+				"BE",
+				"BestBPM"
+			],
+			[
+				"ab",
+				"ABPM"
+			],
+			[
+				"A",
+				"ABPM"
+			],
+			[
+				"hi",
+				"HighestReachedBPM"
+			],
+			[
+				"s",
+				"sum"
+			],
+			[
+				"ave",
+				"averageInBPM"
+			],
+			[
+				"av",
+				"averageInMilliseconds"
+			],
+			[
+				"ts",
+				"tsB"
+			],
+			[
+				"timeStam",
+				"timeStampB"
+			],
+			[
+				"mut",
+				"muteId"
+			],
+			[
+				"mys",
+				"mysql_close"
+			],
+			[
+				"my",
+				"mypassword"
+			],
+			[
+				"date_de",
+				"date_default_timezone_set"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"i",
+				"items"
+			],
+			[
+				"re",
+				"responseXML"
+			],
+			[
+				"for",
+				"for	for (…) {…}"
+			],
+			[
+				"u",
+				"ul	Tag"
+			],
+			[
+				"te",
+				"text-align"
+			],
+			[
+				"background",
+				"background-size"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"ba",
+				"background-color"
+			],
+			[
+				"tex",
+				"text-transform"
+			],
+			[
+				"fon",
+				"font-size"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"site",
+				"site-icon"
+			],
+			[
+				"home",
+				"home_url"
+			],
+			[
+				"p",
+				"php"
+			],
+			[
+				"bor",
+				"border"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"tex-",
+				"text-decoration"
+			],
+			[
+				"background-c",
+				"background-color"
+			],
+			[
+				"max-",
+				"max-width"
+			],
+			[
+				"min",
+				"min-width"
+			],
+			[
+				"margi",
+				"margin-bottom"
+			],
+			[
+				"font-s",
+				"font-size"
+			],
+			[
+				"sa",
+				"sans-serif"
+			],
+			[
+				"pop",
+				"popper-scores-theme"
+			],
+			[
+				"tr",
+				"true"
+			],
+			[
+				"if",
+				"ifmain	if __name__ == '__main__'"
+			],
+			[
+				"rän",
+				"tRänteavdrag"
+			],
+			[
+				"print",
+				"printTVMenu"
+			],
+			[
+				"tv",
+				"tvLista"
+			],
+			[
+				"read",
+				"readNum"
+			],
+			[
+				"change",
+				"changeTone2"
+			],
+			[
+				"ch",
+				"changeTone1"
+			],
+			[
+				"cha",
+				"changeTone2"
+			],
+			[
+				"linked",
+				"linkedQ"
+			],
+			[
+				"ls",
+				"lst1"
+			],
+			[
+				"check",
+				"checkKeyCode1"
+			],
+			[
+				"f",
+				"first"
+			],
+			[
+				"var",
+				"varOne"
+			],
+			[
+				"intr",
+				"intervalLoop"
+			],
+			[
+				"va",
+				"variableObject_1"
+			],
+			[
+				"variableObject_",
+				"variableObject_1"
+			],
+			[
+				"E",
+				"assertEqual"
+			],
+			[
+				"readNu",
+				"readNumber"
+			],
+			[
+				"rea",
+				"readStor"
+			],
+			[
+				"me",
+				"message"
+			],
+			[
+				"S",
+				"Syntax_Error"
+			],
+			[
+				"Syntax",
+				"Syntax_Error"
+			],
+			[
+				"Synt",
+				"Syntax_Error"
+			],
+			[
+				"is",
+				"isEmpty"
+			],
+			[
+				"Syn",
+				"Syntax_Error"
+			],
+			[
+				"r",
+				"raise"
+			],
+			[
+				"L",
+				"linkedSFile"
+			],
+			[
+				"Linked",
+				"linkedQFile"
+			],
+			[
+				"lin",
+				"linkedQFile"
+			],
+			[
+				"std",
+				"std_in"
+			],
+			[
+				"try",
+				"try	Try/Except"
+			],
+			[
+				"b",
+				"bokstav"
+			],
+			[
+				"t",
+				"twoNumbers"
+			],
+			[
+				"po",
+				"position"
+			],
+			[
+				"hash",
+				"hashvalue"
+			],
+			[
+				"str",
+				"stringkey"
+			],
+			[
+				"node",
+				"nodeData"
+			],
+			[
+				"n",
+				"nodeData"
+			],
+			[
+				"put",
+				"putNode"
+			],
+			[
+				"k",
+				"keys"
+			],
+			[
+				"D",
+				"DictHash"
+			],
+			[
+				"py",
+				"pyDict"
+			],
+			[
+				"st",
+				"startslot"
+			],
+			[
+				"slot",
+				"slots"
+			],
+			[
+				"dic",
+				"dict2"
+			],
+			[
+				"ar",
+				"artistnamn"
+			],
+			[
+				"lat",
+				"latDictHash"
+			],
+			[
+				"ord",
+				"ordet"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "js/model/dinnerModel.js",
+			"settings":
+			{
+				"buffer_size": 15216,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/app.js",
+			"settings":
+			{
+				"buffer_size": 705,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var Controller = function(model){\n	\n	$( \".loading\" ).hide();\n	\n	$( document ).ajaxStart(function() {\n		$('.loading').css('display', ''); \n		$( \".loading\" ).show();\n	});\n	\n	$( document ).ajaxStop(function() {\n		$('.loading').css('display', ''); \n		$( \".loading\" ).hide();\n	});\n\n	$('.submit').click (function() {\n		// $('.form-control').submit()\n		console.log('hej');\n	});\n	\n	// start app\n	$('#create-dinner').click(function(){\n		$('#body').css('background-color','white');\n		$('#page-header').css('background-color','rgba(204, 204, 204, 1)');\n		model.update();\n	});\n	\n	\n	// input-people form\n	$('#number-of-people').change(function() {\n		model.setNumberOfGuests(this.value);\n		model.update();\n	});\n	\n	// filter form\n	$('#form-control').change(function() {\n		model.setFilterType(this.value.toLowerCase());\n		model.update();\n	});\n\n	// confirm dish\n	$('#confirm-dish').click(function(){\n		var dishID = $('.main1-view2-dish').attr('id');\n		console.log(dishID);\n		var oneDish = model.singleRecipe[0];\n		\n		model.menu.push(oneDish);\n		console.log(model.menu);\n		model.update();\n\n	})\n	\n	// go to prepView\n	$('#print-recipe').click(function() {\n		model.update();\n	});\n\n\n	// search filter\n	// $('#search').keyup(function() {\n		// var searchField = $('#search').val();\n		// var myExp = new RegExp(searchField, \"i\");\n		// model.setSearchDish(myExp);\n		// model.update();\n	// });\n	\n\n	// .main1view1 är den yttre diven\n	// .main1view1dishes är de dynamiskt genererade elementen\n	$('.main1view1').on('click', '.main1view1dishes', function(){\n		\n		var dishID = $(this).attr('id');		\n		model.setDishID(dishID);\n		var id = model.getDishID();\n		model.fetchRecipe(dishID);\n		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, .main1search').css('display', ''); \n		$('.main1').show(); \n		$('.start-page, .main1view1, .main2, .main1search').hide();\n		model.update();\n\n	});\n\n	// $( \"main1view1\" ).on( \"click\", \"main1view1dishes\", function() {\n	//   $( this ).after( '<p id='+ count + '>Another paragraph! ' + (++count) + '</p>' );\n	// });\n\n};",
+			"file": "js/controller/controller.js",
+			"file_size": 2051,
+			"file_write_time": 131012994360000000,
+			"settings":
+			{
+				"buffer_size": 2052,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/view/dish-view.js",
+			"settings":
+			{
+				"buffer_size": 1898,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "var SelectionView = function (container, model, x) {\n	this.updateDisplay = function() {\n		\n		var allRecipes;\n\n		$(\".main1view1\").html('<b><h2>Start by typing a search term!</h2></b>');\n\n		// On ENTER button press search\n		$('.form-control').keydown(function(event) {	\n			if (event.keyCode == 13) {\n				var searchField = $('#search').val();\n				var myExp = new RegExp(searchField, \"i\");\n				model.setSearchDish(myExp);\n				model.getRecipe(searchField);\n				//$('.loading').show();\n				model.update();\n			}\n		});	\n		\n      // Length of the array for the FOR loop\n		allRecipes = model.storeSearch;\n		temp = allRecipes[0];\n				\n		if (temp === undefined) {\n			return;\n		}\n		\n		else {\n			var len = temp.length;\n			$(\".main1view1\").html('');\n			for (i = 0; i < len; i++) {	\n				var outputDish = temp[i];\n					$(\".main1view1\").append('<div class=\"col-xs-2 x\" id=\"'+outputDish.RecipeID+'\" ><img class=\"icon\" src=\"'+outputDish.ImageURL120+'\"><p>'+outputDish.Title+'</p></div>');\n			};\n		} \n	};\n};\n",
+			"file": "js/view/selection-view.js",
+			"file_size": 1002,
+			"file_write_time": 131011549500000000,
+			"settings":
+			{
+				"buffer_size": 987,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/view/prep-view.js",
+			"settings":
+			{
+				"buffer_size": 1368,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/view/side-view.js",
+			"settings":
+			{
+				"buffer_size": 808,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/view/over-view.js",
+			"settings":
+			{
+				"buffer_size": 2033,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/styles.css",
+			"settings":
+			{
+				"buffer_size": 6351,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/hjalmarjakobsson/Sites/_javascript sites/javascript - bubbling/bubble-capture.html",
+			"settings":
+			{
+				"buffer_size": 1069,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "/Users/hjalmarjakobsson/Sites/_javascript sites/javascript - bubbling/bubble-capture2.html",
+			"settings":
+			{
+				"buffer_size": 548,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"build_system_choices":
+	[
+		[
+			[
+				[
+					"Packages/Python/Python.sublime-build",
+					""
+				],
+				[
+					"Packages/Python/Python.sublime-build",
+					"Syntax Check"
+				]
+			],
+			[
+				"Packages/Python/Python.sublime-build",
+				"Syntax Check"
+			]
+		]
+	],
+	"build_varint": "",
+	"command_palette":
+	{
+		"height": 392.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"book",
+				"Bookmarks: Toggle"
+			],
+			[
+				"HTML",
+				"HTML: Wrap Selection With Tag"
+			]
+		],
+		"width": 392.0
+	},
+	"console":
+	{
+		"height": 126.0,
+		"history":
+		[
+		]
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"expanded_folders":
+	[
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/css",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/controller",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/model",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view"
+	],
+	"file_history":
+	[
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/index.html",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/dish-view.js",
+		"/Users/hjalmarjakobsson/Library/Application Support/Sublime Text 3/Packages/User/Default (OSX).sublime-keymap",
+		"/Users/hjalmarjakobsson/Library/Application Support/Sublime Text 3/Packages/Default/Default (OSX).sublime-keymap",
+		"/Users/hjalmarjakobsson/Desktop/testing subl/roux_website/_scripts/SpryTabbedPanels.js",
+		"/Users/hjalmarjakobsson/Desktop/testing subl/roux_website/_scripts/SpryTabbedPanels.css",
+		"/Users/hjalmarjakobsson/Desktop/testing subl/roux_website/spotlight.htm",
+		"/Users/hjalmarjakobsson/Desktop/testing subl/roux_website/_css/main.css",
+		"/Users/hjalmarjakobsson/Desktop/testing subl/roux_website/index.htm",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/js/app.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/websyths/js/tuna.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/websyths/js/ws-51.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/websyths/ws-51.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/websyths/tuna.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/websyths/index.html",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/synth zero/jquery.knob.min.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/synth zero/app/script.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/reverbGen/main.js",
+		"/Users/hjalmarjakobsson/Sites/web audio processing/synth zero/index.html",
+		"/Users/hjalmarjakobsson/Sites/zPolySynth2/index.html",
+		"/Users/hjalmarjakobsson/Sites/zPolySynth2/synth.js",
+		"/Users/hjalmarjakobsson/Sites/zMonophonic Synth/qwerty-hancock.js",
+		"/Users/hjalmarjakobsson/Sites/zMonophonic Synth/mono.js",
+		"/Users/hjalmarjakobsson/Sites/zPoly Synth1/index.htm",
+		"/Users/hjalmarjakobsson/Sites/PM - MultiMode.js/change2simultaneously.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/.git/MERGE_MSG",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/.git/COMMIT_EDITMSG",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/proto-type/observer.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/show-hide.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/app.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/side-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/selection-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/search-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/prep-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/over-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/model/dinnerModel.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/show-hide.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/exampleView.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/dish-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/prep-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/index.html",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/side-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/selection-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/over-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/Interaktiva-Lab-2/js/view/search-view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/view.js",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/css/styles.css",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/proto-type/6 dinner_preparation.png",
+		"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2/js/view/exampleView.js",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/.git/COMMIT_EDITMSG",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/index.html",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/.git/MERGE_MSG",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/README.md",
+		"/Users/hjalmarjakobsson/Desktop/Bootstrap 3/Ch02/02_04/bootstrap/index.html",
+		"/Users/hjalmarjakobsson/Desktop/Bootstrap 3/Ch02/02_07/bootstrap/index.html",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/random-betav6.js",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/css/style.css",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/pseudo-code/maf-pseudo.js",
+		"/Users/hjalmarjakobsson/Downloads/Ex_Files_PHP_forWD/Exercise Files/Mac_only/.htaccess",
+		"/Users/hjalmarjakobsson/Desktop/repos/github-for-web-designers/index.html",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/pm-prototype.graffle",
+		"/Users/hjalmarjakobsson/Library/Application Support/Sublime Text 3/Packages/User/Preferences.sublime-settings",
+		"/Users/hjalmarjakobsson/Desktop/repos/git-basics/index.html",
+		"/Users/hjalmarjakobsson/Desktop/repos/git-basics/_css/main.css",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/project-goal.js",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/project-goal.",
+		"/Users/hjalmarjakobsson/Sites/Pitch Maschine/project-goal.md",
+		"/Users/hjalmarjakobsson/Desktop/repos/git-basics/.git/COMMIT_EDITMSG",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-easy-php-projects-single-serving-sites/index.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/index.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/Exercise Files/Chapter 05/05_08/sandbox/assoc_arrays.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/Exercise Files/Chapter 05/05_03/sandbox/variables.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/Exercise Files/Chapter 05/05_01/helloworld.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/Exercise Files/Chapter 05/05_01/my_phpinfo.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/Exercise Files/Chapter 04/04_01/my_phpinfo.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-php-w-mysql/Exercise Files/Chapter 04/04_01/index.html",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-validating-processing-forms/log_formdb.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/website-image-testing/wp-config.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-validating-processing-forms/process.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/index.html",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/script.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/images/Hassum_Harrod_tn.jpg",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/03-01/workingfolder/ajax/script.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/data.txt",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/data.xml",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-03/workingfolder/ajax/data.xml",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-03/workingfolder/ajax/data.txt",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-03/workingfolder/ajax/index.html",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-03/workingfolder/ajax/script.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-02/workingfolder/ajax/data.txt",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-02/workingfolder/ajax/index.html",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/02-02/workingfolder/ajax/script.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/javascript-and-ajax/01-02/workingfolder/ajax/script.js",
+		"/Users/hjalmarjakobsson/Desktop/JS and AJAX/01-02/workingfolder/ajax/index.html",
+		"/Users/hjalmarjakobsson/Desktop/JS and AJAX/01-02/workingfolder/ajax/data.txt",
+		"/Users/hjalmarjakobsson/Desktop/JS and AJAX/01-02/workingfolder/ajax/script.js",
+		"/Users/hjalmarjakobsson/Sites/Bootstrap Training/css/styles.css",
+		"/Users/hjalmarjakobsson/Sites/Bootstrap Training/index.html",
+		"/Users/hjalmarjakobsson/Desktop/Bootstrap 3/Ch02/02_01/bootstrap/images/reptiles.jpg",
+		"/Users/hjalmarjakobsson/Downloads/bootstrap-3.3.6-dist/css/bootstrap.min.css",
+		"/Users/hjalmarjakobsson/Sites/Bootstrap Training/js/script.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/popper-scores-theme/style.css",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/popper-scores-theme/header.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/popper-scores-theme/functions.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/popper-scores-theme/js/navigation.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/twentyfifteen/functions.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/twentyfifteen/js/functions.js",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/twentyfifteen/style.css",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/PopperScores/wp-content/themes/popper-scores-theme/inc/custom-header.php",
+		"/Users/hjalmarjakobsson/Sites/MAMPsites/lynda-underscores-theme/wp-config.php",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_v3_wComments/main_copy.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_v3_wComments/filkoll.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_v3_wComments/bostadsClass_copy.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_v3_wComments/menuClass_copy.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_v3_wComments/bostadsobjekt.txt",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab5_copy/lab5_tv_class.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab5_copy/lab5_main.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab5/lab5_tv_class.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab5 copy/lab5_tv_class.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab5 copy/lab5_main.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab5/lab5_main.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_copy/menuClass_copy.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_copy/bostadsClass_copy.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift_copy/main_copy.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift copy/main.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift copy/menuClass.py",
+		"/Users/hjalmarjakobsson/Dropbox (Lidala AB)/_KTH Medieteknik/_KTHLaborationer/prog DD1131/lab_p_uppgift/menuClass.py"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 93.0,
+		"where_history":
+		[
+			"/Users/hjalmarjakobsson/Sites/Interaktiva-Lab-2",
+			"/Users/hjalmarjakobsson/Sites/Bootstrap Training/Images"
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"id",
+			"numberOfGuests",
+			"getDishPrice",
+			"getdishprice",
+			"getDishPrice",
+			"geustNumber",
+			"ingredientsVar",
+			"MAIN2PREPDISH",
+			"click",
+			"x",
+			"storeSearch",
+			".each",
+			"$.each",
+			".attr",
+			"this.attr",
+			"review",
+			"scope",
+			"img",
+			"href",
+			"About",
+			"about",
+			"convolver",
+			"convolv",
+			"reverb",
+			"xmlhttp",
+			"analyt",
+			"envelope",
+			"buffer",
+			"demosource",
+			"demoSourceBuffers",
+			"loadDemoSource",
+			"demoSourceName",
+			"demoSource",
+			"'demoSource'",
+			"demoSource",
+			"demoSourceBuffers",
+			"name",
+			"demoSourceName",
+			"demoSourceBuffers",
+			"loadDemoSource",
+			"demoSourceSelector",
+			"css",
+			"saw",
+			"keydown",
+			"id",
+			"dish-name",
+			"consol",
+			"cons",
+			"consol",
+			"console",
+			"main2-go-back",
+			"dishID",
+			"allRecipes",
+			"DinnerMod",
+			"new",
+			"Model",
+			"allRec",
+			"allReci",
+			"();\n",
+			"Model",
+			"model",
+			"Model",
+			"model",
+			"Model",
+			"model",
+			"Model",
+			"model",
+			"allRecipes",
+			"allREcipes",
+			"len",
+			"count",
+			"confirmedDish",
+			"key",
+			"getdish",
+			"after",
+			"confirmed",
+			"show",
+			"change view",
+			"confirmDish",
+			"each",
+			"hasown",
+			"dishID",
+			"allRecipes",
+			"main1",
+			"name",
+			"top bar in ",
+			"print-full",
+			"vector",
+			"col-lg-12",
+			" col-lg-offset-3",
+			"col-lg-1 col-lg-offset-3",
+			"col-sm-offset-0",
+			"col-sm-6",
+			"col-lg-12",
+			"col-xs-6",
+			">\n",
+			"password",
+			"root",
+			"logformdb",
+			"col-sm-6",
+			"sm",
+			"lg",
+			"md",
+			"2.1.4",
+			"6.2",
+			"## menus",
+			"# header",
+			"# header	",
+			"esc_url",
+			"@media",
+			"# con",
+			"typo",
+			"# Content",
+			"# content",
+			"content",
+			"typo",
+			"infi",
+			"acces",
+			"elements",
+			"bostad",
+			"Bostad",
+			"bostad",
+			"information_schema",
+			"CREATE DATABASE `information_schema` DEFAULT CHARACTER SET utf8 COLLATE utf8_general_ci;\nUSE `information_schema`;",
+			"lista",
+			"WP_Query object",
+			"WP_Query class",
+			"WP_Query"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": false,
+		"whole_word": false,
+		"wrap": true
+	},
+	"groups":
+	[
+		{
+			"selected": 5,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "js/model/dinnerModel.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 15216,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3819,
+								3819
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 2481.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 5,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/app.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 705,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								484,
+								484
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 6,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "js/controller/controller.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2052,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								997,
+								997
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 544.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "js/view/dish-view.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1898,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								191,
+								193
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 136.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/view/selection-view.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 987,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								849,
+								849
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 7,
+					"type": "text"
+				},
+				{
+					"buffer": 5,
+					"file": "js/view/prep-view.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1368,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1001,
+								1001
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 6,
+					"file": "js/view/side-view.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 808,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								216,
+								588
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 7,
+					"file": "js/view/over-view.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 2033,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								363,
+								363
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 8,
+					"file": "css/styles.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 6351,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3518,
+								3531
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"translate_tabs_to_spaces": false
+						},
+						"translation.x": -0.0,
+						"translation.y": 3461.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 8,
+					"type": "text"
+				},
+				{
+					"buffer": 9,
+					"file": "/Users/hjalmarjakobsson/Sites/_javascript sites/javascript - bubbling/bubble-capture.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1069,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								168,
+								182
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 4,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 84.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 10,
+					"type": "text"
+				},
+				{
+					"buffer": 10,
+					"file": "/Users/hjalmarjakobsson/Sites/_javascript sites/javascript - bubbling/bubble-capture2.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 548,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								404,
+								404
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 9,
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 34.0
+	},
+	"input":
+	{
+		"height": 34.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"output.exec":
+	{
+		"height": 100.0
+	},
+	"output.find_results":
+	{
+		"height": 619.0
+	},
+	"pinned_build_system": "",
+	"project": "dinnerplanner.sublime-project",
+	"replace":
+	{
+		"height": 54.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+			[
+				"",
+				"js/view/selection-view.js"
+			],
+			[
+				"css",
+				"_css/main.css"
+			]
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 500.0,
+		"last_filter": "pit",
+		"selected_items":
+		[
+			[
+				"pit",
+				"~/Sites/Pitch Maschine/pitch-maschine.sublime-project"
+			],
+			[
+				"",
+				"~/Sites/Pitch Maschine/pitch-maschine.sublime-project"
+			],
+			[
+				"pithc",
+				"~/Sites/Pitch Maschine/pitch-maschine.sublime-project"
+			],
+			[
+				"pi",
+				"~/Desktop/pitch-maschine.sublime-workspace"
+			],
+			[
+				"pitch",
+				"~/Desktop/pitch-maschine.sublime-workspace"
+			]
+		],
+		"width": 380.0
+	},
+	"select_symbol":
+	{
+		"height": 0.0,
+		"last_filter": "",
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"selected_group": 0,
+	"settings":
+	{
+	},
+	"show_minimap": true,
+	"show_open_files": false,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 238.0,
+	"status_bar_visible": true,
+	"template_settings":
+	{
+	}
+}

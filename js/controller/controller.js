@@ -63,4 +63,23 @@ var Controller = function(model){
 	// });
 	
 
+	// .main1view1 är den yttre diven
+	// .main1view1dishes är de dynamiskt genererade elementen
+	$('.main1view1').on('click', '.main1view1dishes', function(){
+		
+		var dishID = $(this).attr('id');		
+		model.setDishID(dishID);
+		var id = model.getDishID();
+		model.fetchRecipe(dishID);
+		$('.start-page, .main1, .main2, .main1view1, .main1view2, .main2view1, .main2view2, .main1search').css('display', ''); 
+		$('.main1').show(); 
+		$('.start-page, .main1view1, .main2, .main1search').hide();
+		model.update();
+
+	});
+
+	// $( "main1view1" ).on( "click", "main1view1dishes", function() {
+	//   $( this ).after( '<p id='+ count + '>Another paragraph! ' + (++count) + '</p>' );
+	// });
+
 };

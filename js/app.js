@@ -16,16 +16,11 @@ $(document).ready(function(){
 	var overView 		= new OverView( $('.main2view1'), model );
 	var prepView 		= new PrepView( $('main2view2'), model );
 
+	// MAKE OBSERVER
 	model.subscribe(sideView.updateDisplay);
 	model.subscribe(selectionView.updateDisplay);
 	model.subscribe(dishView.updateDisplay);
 	model.subscribe(overView.updateDisplay);
 	model.subscribe(prepView.updateDisplay);
-	
-		// // start app
-	// $('#create-dinner').click(function(){
-		// $('#body').css('background-color','white');
-		// model.update();
-	// });
 	
 });
